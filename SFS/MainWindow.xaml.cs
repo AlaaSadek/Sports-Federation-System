@@ -23,6 +23,9 @@ namespace SFS
         public MainWindow()
         {
             InitializeComponent();
+            AGE a = new SFS.AGE();
+            a.Show();
+            //this.Close();
         }
     }
 }

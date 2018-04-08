@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -56,12 +56,42 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Accounting.cs" />
+    <Compile Include="AGE.xaml.cs">
+      <DependentUpon>AGE.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Bsponsor.xaml.cs">
+      <DependentUpon>Bsponsor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Championships.cs" />
     <Compile Include="Club.cs" />
     <Compile Include="Coach.cs" />
+    <Compile Include="coachgrid.xaml.cs">
+      <DependentUpon>coachgrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="placech.xaml.cs">
+      <DependentUpon>placech.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="playersfiltration.xaml.cs">
+      <DependentUpon>playersfiltration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Sponsers.cs" />
     <Compile Include="Team.cs" />
+    <Compile Include="typech.xaml.cs">
+      <DependentUpon>typech.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AGE.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Bsponsor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="coachgrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -75,6 +105,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="placech.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="playersfiltration.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="typech.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Person.cs" />
@@ -103,6 +145,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="backgrd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="questionM.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
