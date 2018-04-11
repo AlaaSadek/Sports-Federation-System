@@ -23,5 +23,22 @@ namespace SFS
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+        /*    List<Championships> l =//main list;
+            for (int i = 0; i < l.Count; i++)
+            {
+                    if (l[i].GetPlace() == textBox.Text )
+                    {
+                        Championships temp = l[i];
+                    l[i] = temp;
+                       
+                    }
+                } */
+            }
+            
+           
+        }
     }
-}
+

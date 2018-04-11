@@ -23,5 +23,22 @@ namespace SFS
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+      /*         List<Coach> l =//main list;
+          for (int i = 0; i < l.Count; i++)
+          {
+              for (int j = i + 1; j < l.Count; j++)
+              {
+                  if (l[i].champlist.Count> l[j].champlist.Count)
+                  {
+                      Coach tmp = l[i];
+                     l[i] = l[j];
+                      l[j] = tmp;
+                  }
+              }
+      }*/
+        }
     }
 }

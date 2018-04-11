@@ -14,7 +14,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="402,94.333,0,0" Grid.Row="1" Height="60">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="402,94.333,0,0" Grid.Row="1" Height="60" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="questionM.png"/>
             </Button.Background>
@@ -37,7 +37,6 @@
             <ComboBoxItem>JUNIOR</ComboBoxItem>
             <ComboBoxItem>SENIOR</ComboBoxItem>
         </ComboBox>
-        <DataGrid x:Name="age" HorizontalAlignment="Left" VerticalAlignment="Top" Height="193" Grid.RowSpan="2" Width="281" Margin="102,103,0,0"/>
-
+        <DataGrid x:Name="ages" HorizontalAlignment="Left" VerticalAlignment="Top" Height="206" Width="281" Margin="102,98,0,0" Grid.RowSpan="2"/>
     </Grid>
 </Window>

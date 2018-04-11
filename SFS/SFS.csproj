@@ -68,6 +68,7 @@
     <Compile Include="coachgrid.xaml.cs">
       <DependentUpon>coachgrid.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Containers.cs" />
     <Compile Include="placech.xaml.cs">
       <DependentUpon>placech.xaml</DependentUpon>
     </Compile>

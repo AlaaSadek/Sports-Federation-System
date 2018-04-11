@@ -12,7 +12,7 @@
         </Grid.Background>
         <Label x:Name="label" Content="Best Sponsor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="144" Margin="164,42,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
         <DataGrid x:Name="bestsponsor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="206" Width="281" Margin="102,87,0,0"/>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408,251,0,0" Height="60">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408,251,0,0" Height="60" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="questionM.png"/>
             </Button.Background>

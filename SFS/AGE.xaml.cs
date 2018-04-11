@@ -26,12 +26,42 @@ namespace SFS
 
         private void comboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
         }
 
         private void age1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+        }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+               
+              for (int i = 0; i < Containers.Player_list.Count; i++)
+              {
+                  for (int j = i + 1; j < Containers.Player_list.Count; j++)
+                  {
+                      if (Containers.Player_list[i].ageCalculator() > Containers.Player_list[j].ageCalculator())
+                      {
+                          Player temp = Containers.Player_list[i];
+                          Containers.Player_list[i] = Containers.Player_list[j];
+                          Containers.Player_list[j] = temp;
+                      }
+                  }
+              }
+              List<Player> juniors = new List<Player>();
+              List<Player> seniors = new List<Player>();
+              for(int i=0;i<Containers.Player_list.Count;i++)
+              {
+                  if(Containers.Player_list[i].ageCalculator()>=18)
+                  {
+                      seniors.Add(Containers.Player_list[i]);
+                  }
+                  else
+                  {
+                      juniors.Add(Containers.Player_list[i]);
+                  }
+              }
         }
     }
 }
+
+   

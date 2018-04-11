@@ -23,5 +23,22 @@ namespace SFS
         {
             InitializeComponent();
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            /*    List<Sponsers> x =//main list;
+            for (int i = 0; i < x.Count; i++)
+            {
+                for (int j = i + 1; j < x.Count; j++)
+                {
+                    if (x[i].GetSponsor_price() > x[j].GetSponsor_price())
+                    {
+                        Sponsers tmp = x[i];
+                        x[i] = x[j];
+                        x[j] = tmp;
+                    }
+                }
+        }*/
+        }
     }
 }
