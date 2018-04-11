@@ -8,6 +8,7 @@ namespace SFS
 {
     class Championships
     {
+        string Name;
         string place;
         string type;
         bool senior;
@@ -15,6 +16,7 @@ namespace SFS
         int results;
         public Championships()
         {
+            Name = "";
             place = "";
             teamList = new List<Team>();
             results = 0;
@@ -30,6 +32,14 @@ namespace SFS
         public void setPlace(string place)
         {
             this.place = place;
+        }
+        public void setName(string n)
+        {
+            this.Name = n;
+        }
+        public string getName()
+        {
+            return this.Name;
         }
         public string GetPlace()
         {
