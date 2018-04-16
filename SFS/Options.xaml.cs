@@ -21,13 +21,9 @@ namespace SFS
     {
         public Options()
         {
-            InitializeComponent();
+          InitializeComponent();
         }
 
-        private void InitializeComponent()
-        {
-            throw new NotImplementedException();
-        }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
