@@ -8,20 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/back.png/bk.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgr.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgrd.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/backgrd/backgr.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/background.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/bk.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/check.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/cross.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/dfbdeb52-a232-46f8-81db-afe8a1bedebc.jpg")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/edit.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/query.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/questionm.png/query.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/search.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/sfs.png")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("images/view.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("omar.png")]
 
 

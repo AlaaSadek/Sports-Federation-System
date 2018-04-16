@@ -60,19 +60,28 @@ namespace SFS
                       juniors.Add(l[i]);
                   }
               }
-            textBox.Text = Containers.Player_list.Count.ToString();
-            Player omar = new Player("omar","1111111111","mmmmmm","2222","aasdasd",12,12,"33123","33333");
-            Containers.Player_list.Add(omar);
-
             List<int> tage = new List<int>();
             List<string> tname = new List<string>();
-            for (int i = 0; i < l.Count; i++)
+            if (age1.Text == "Senior")
             {
-                tage.Add(l[i].ageCalculator());
-                tname.Add(l[i].getName());
+
+                for (int i = 0; i < seniors.Count; i++)
+                {
+                    tage.Add(seniors[i].ageCalculator());
+                    tname.Add(seniors[i].getName());
+                }
+
+            }
+            else
+            {
+                for (int i = 0; i < juniors.Count; i++)
+                {
+                    tage.Add(juniors[i].ageCalculator());
+                    tname.Add(juniors[i].getName());
+                }
             }
             listBox.ItemsSource = tname;
-            listBox1.ItemsSource = tage;
+                listBox1.ItemsSource = tage;
 
         }
 

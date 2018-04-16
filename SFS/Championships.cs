@@ -12,14 +12,12 @@ namespace SFS
         string place;
         string type;
         string senior;
-        public List<Team> teamList;
         int results;
         public Championships()
         {
             Name = "";
             place = "";
-            teamList = new List<Team>();
-            results = 0;
+             results = 0;
            
         }
         public Championships(string placee,string Type,string sn)
@@ -40,6 +38,10 @@ namespace SFS
         public string getName()
         {
             return this.Name;
+        }
+        public void setplace(string s)
+        {
+            place = s;
         }
         public string GetPlace()
         {

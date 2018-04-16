@@ -7,4 +7,25 @@
     <Club_Championships>0</Club_Championships>
     <Club_Sponsors>0</Club_Sponsors>
   </Club>
+  <Club>
+    <Club_Name>el ahly</Club_Name>
+    <starting_Date>4/15/2018</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+  <Club>
+    <Club_Name>Ahly</Club_Name>
+    <starting_Date>4/5/1990</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
+  <Club>
+    <Club_Name>Al mekawleen</Club_Name>
+    <starting_Date>12/27/1915</starting_Date>
+    <Club_Teams>0</Club_Teams>
+    <Club_Championships>0</Club_Championships>
+    <Club_Sponsors>0</Club_Sponsors>
+  </Club>
 </Clubs>

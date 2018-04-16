@@ -31,7 +31,7 @@ namespace SFS
 
         private void ADD_Click(object sender, RoutedEventArgs e)
         {
-            string gender;
+            string gender = "";
             string med;
             string avail;
             int y = int.Parse(Emplyedate.Text.Substring(6));
@@ -40,17 +40,24 @@ namespace SFS
             int per = x / 5;
             string working_years = x.ToString();
             int bonu = 0;
-            if(x>5)
+            if (x > 5)
             {
-                 bonu = (per * sal) / 100;
+                bonu = (per * sal) / 100;
             }
             string bonus = bonu.ToString();
             // string ID =  Name.Text.ElementAt(0)+ Name.Text.ElementAt(1) +Date.Text.ElementAt(6) + Date.Text.ElementAt(7);
             string temp = Date.Text;
-            string temp2=Name.Text;
-            string id = temp2[0].ToString() + temp2[1].ToString() + temp[5].ToString() + temp[6].ToString();
-          //  MessageBox.Show(id);
-            if (Male.IsChecked == true)
+            string temp2 = Name.Text;
+            string id = temp2[0].ToString() + temp2[1].ToString() + temp[6].ToString() + temp[7].ToString();
+            //  MessageBox.Show(id);
+            bool mobile = false;
+            for (int i = 0; i < Containers.Player_list.Count(); i++)
+            {
+                if (Containers.Player_list[i].getmobile() == number.Text)
+                    mobile = true;
+            } 
+           
+             if (Male.IsChecked == true)
                 gender = "Male";
             else gender = "Female";
 
@@ -71,8 +78,11 @@ namespace SFS
                 MessageBox.Show("Please fill the required information !");
            else if ((Yes.IsChecked == true) && (No.IsChecked == true))
                 MessageBox.Show("Please fill the required information !");
-          
-           else  if (!File.Exists("Employees.xml"))
+            else if (mobile == true)
+            {
+                MessageBox.Show("Mobile number is already registered !");
+            }
+            else  if (!File.Exists("Employees.xml"))
             {
                 XmlTextWriter document = new XmlTextWriter("Employees.xml", Encoding.UTF8);
 
@@ -97,7 +107,7 @@ namespace SFS
                 document.WriteEndElement();
 
                 document.WriteStartElement("Medical_Form");
-                document.WriteString(med.ToString());
+                document.WriteString(med);
                 document.WriteEndElement();
 
                 document.WriteStartElement("Salary");
@@ -126,6 +136,10 @@ namespace SFS
 
                 document.WriteStartElement("Department");
                 document.WriteString(Department.Text);
+                document.WriteEndElement();
+
+                document.WriteStartElement("Password");
+                document.WriteString(password.Text);
                 document.WriteEndElement();
 
                 document.WriteEndElement();
@@ -161,7 +175,7 @@ namespace SFS
                 employee.AppendChild(Genderr);
 
                 XmlNode Medical = doc.CreateElement("Medical_Form");
-                Medical.InnerText = med.ToString();
+                Medical.InnerText = med;
                 employee.AppendChild(Medical);
 
                 XmlNode salary = doc.CreateElement("Salary");
@@ -192,6 +206,10 @@ namespace SFS
                 dep.InnerText = Department.Text;
                 employee.AppendChild(dep);
 
+                XmlNode pas = doc.CreateElement("Password");
+                pas.InnerText = password.Text;
+                employee.AppendChild(pas);
+
                 doc.DocumentElement.AppendChild(employee);
                 doc.Save("Employees.xml");
 
@@ -203,6 +221,7 @@ namespace SFS
         {
             Add_Options cccc = new Add_Options();
             cccc.Show();
+            this.Hide();
         }
 
         private void ID_TextChanged(object sender, TextChangedEventArgs e)

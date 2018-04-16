@@ -258,3 +258,13 @@ C:\Users\Dell\Documents\GitHub\New folder\Sports-Federation-System\SFS\obj\Debug
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Options.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Loginas.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Loginas.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\employeelogin.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\employeelogin.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\AccountingOptionForm.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Add Expense.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\getExpenseMonth.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\AccountingOptionForm.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Add Expense.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\getExpenseMonth.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Add_PlayerResults.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Add_PlayerResults.baml

@@ -11,6 +11,9 @@ namespace SFS
         string TeamName;
         // list of championships
         bool senior;
+        public List<Championships_players> champion = new List<Championships_players>();
+        int result;
+        string CoachName;
    public  Player()
         {
             TeamName = "";
@@ -24,23 +27,39 @@ namespace SFS
             }
         }
 
-        public Player(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob, string teamname) : base(namee, date, genderr, ID, medical, sal, bon,mob)
+        public Player(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob, string teamname,string coach) : base(namee, date, genderr, ID, medical, sal, bon,mob)
         {
             this.TeamName = teamname;
-            
+            this.CoachName = coach;
         }
 
         public void set_teamname(string name)
         {
             TeamName = name;
         }
-        public bool is_senior()
-        {
-            return this.senior;
-        }
         public string get_teamname()
         {
             return TeamName;
+        }
+        public void set_CoachName(string n)
+        {
+            CoachName = n;
+        }
+        public string get_CoachName()
+        {
+            return CoachName ;
+        }
+        public void set_results(int x)
+        {
+            result = x;
+        }
+        public int get_results()
+        {
+            return result;
+        }
+        public bool is_senior()
+        {
+            return this.senior;
         }
         public void display()
         {

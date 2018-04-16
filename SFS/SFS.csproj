@@ -56,6 +56,12 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Accounting.cs" />
+    <Compile Include="AccountingOptionForm.xaml.cs">
+      <DependentUpon>AccountingOptionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Add Expense.xaml.cs">
+      <DependentUpon>Add Expense.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Add_Championship.xaml.cs">
       <DependentUpon>Add_Championship.xaml</DependentUpon>
     </Compile>
@@ -71,6 +77,9 @@
     <Compile Include="Add_Player.xaml.cs">
       <DependentUpon>Add_Player.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Add_PlayerResults.xaml.cs">
+      <DependentUpon>Add_PlayerResults.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Add__Team.xaml.cs">
       <DependentUpon>Add__Team.xaml</DependentUpon>
     </Compile>
@@ -81,6 +90,8 @@
       <DependentUpon>Bsponsor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Championships.cs" />
+    <Compile Include="Championships_players.cs" />
+    <Compile Include="Championships_team_.cs" />
     <Compile Include="ChampionshipTeamsDatagrid.xaml.cs">
       <DependentUpon>ChampionshipTeamsDatagrid.xaml</DependentUpon>
     </Compile>
@@ -144,6 +155,9 @@
     <Compile Include="EmployeeEmploymentDateDG.xaml.cs">
       <DependentUpon>EmployeeEmploymentDateDG.xaml</DependentUpon>
     </Compile>
+    <Compile Include="employeelogin.xaml.cs">
+      <DependentUpon>employeelogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmployeesDepartmentDataG.xaml.cs">
       <DependentUpon>EmployeesDepartmentDataG.xaml</DependentUpon>
     </Compile>
@@ -158,6 +172,10 @@
     </Compile>
     <Compile Include="Enter_ID_Employee.xaml.cs">
       <DependentUpon>Enter_ID_Employee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Expense.cs" />
+    <Compile Include="getExpenseMonth.xaml.cs">
+      <DependentUpon>getExpenseMonth.xaml</DependentUpon>
     </Compile>
     <Compile Include="Loginas.xaml.cs">
       <DependentUpon>Loginas.xaml</DependentUpon>
@@ -217,6 +235,14 @@
     <Compile Include="typech.xaml.cs">
       <DependentUpon>typech.xaml</DependentUpon>
     </Compile>
+    <Page Include="AccountingOptionForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add Expense.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Add_Championship.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -234,6 +260,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Add_Player.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Add_PlayerResults.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -329,6 +359,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="employeelogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EmployeesDepartmentDataG.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -346,6 +380,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Enter_ID_Employee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="getExpenseMonth.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -520,6 +558,9 @@
     <Resource Include="Images\Search.png" />
     <Resource Include="Images\sfs.png" />
     <Resource Include="Images\view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="omar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

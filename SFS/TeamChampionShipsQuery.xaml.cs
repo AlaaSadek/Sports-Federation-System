@@ -31,7 +31,7 @@ namespace SFS
             {
                 if(Containers.championship_list[i].getName()==textBox.Text  && Containers.championship_list[i].GetPlace()==textBox1.Text)
                 {
-                    filtered = Containers.championship_list[i].teamList;
+                   // filtered = Containers.championship_list[i].teamList;
                 }
                
             }
