@@ -159,6 +159,9 @@
     <Compile Include="Enter_ID_Employee.xaml.cs">
       <DependentUpon>Enter_ID_Employee.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Loginas.xaml.cs">
+      <DependentUpon>Loginas.xaml</DependentUpon>
+    </Compile>
     <Compile Include="mainqueryform.xaml.cs">
       <DependentUpon>mainqueryform.xaml</DependentUpon>
     </Compile>
@@ -343,6 +346,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Enter_ID_Employee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Loginas.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
