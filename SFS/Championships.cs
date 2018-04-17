@@ -8,7 +8,7 @@ namespace SFS
 {
     class Championships
     {
-        string Name;
+       string Name;
         string place;
         string type;
         string senior;
@@ -17,11 +17,13 @@ namespace SFS
         {
             Name = "";
             place = "";
-             results = 0;
+            type = "";
+            results = 0;
            
         }
-        public Championships(string placee,string Type,string sn)
+        public Championships(string placee,string Type,string sn,string name)
         {
+            Name = name;
             place = placee;
             type = Type;
             senior = sn;
@@ -35,25 +37,33 @@ namespace SFS
         {
             this.Name = n;
         }
+        public void Setresults(int results)
+        {
+            this.results = results;
+        }
         public string getName()
         {
             return this.Name;
         }
-        public void setplace(string s)
-        {
-            place = s;
-        }
+        
         public string GetPlace()
         {
             return this.place;
         }
-        public void setresults(int results)
-        {
-            this.results = results;
-        }
+
         public int Getresults()
         {
             return this.results;
+        }
+
+
+        public void Settype(string type)
+        {
+            this.type = type;
+        }
+        public string Gettype()
+        {
+            return this.type;
         }
 
     }

@@ -17,7 +17,6 @@
             <RowDefinition Height="22*"/>
             <RowDefinition Height="306*"/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="Department" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Margin="171,209,0,0" Grid.Row="4"/>
         <TextBox x:Name="Salary" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="161" Margin="172,58,0,0" Grid.Row="4"/>
         <TextBox x:Name="number" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="155" Margin="177,2,0,0" Grid.Row="2" Grid.RowSpan="3"/>
         <TextBox x:Name="Name" HorizontalAlignment="Left" Height="26" TextWrapping="Wrap" VerticalAlignment="Top" Width="154" Margin="179,0,0,0" Grid.Row="1"/>
@@ -67,6 +66,10 @@
         <DatePicker x:Name="Emplyedate" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="170,89,0,0" Width="169" Height="26" Grid.Row="4"/>
         <TextBox x:Name="password" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="163" Margin="170,178,0,0" Grid.Row="4"/>
         <Label x:Name="label2_Copy11" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,169,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold" Grid.Row="4" Height="43" Width="106"/>
-
+        <ComboBox x:Name="Department" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="170,213,0,0" Grid.Row="4" FontSize="16" FontFamily="Traditional Arabic" >
+            <ComboBoxItem Content="HR"/>
+            <ComboBoxItem Content="Coach"/>
+            <ComboBoxItem Content="Accounting"/>
+        </ComboBox>
     </Grid>
 </Window>

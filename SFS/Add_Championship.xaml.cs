@@ -61,8 +61,10 @@ namespace SFS
                 document.WriteString(sen);
                 document.WriteEndElement();
 
-                document.WriteStartElement("Results");
-                document.WriteString("0");
+                
+
+                document.WriteStartElement("Name");
+                document.WriteString(name.Text);
                 document.WriteEndElement();
 
                 document.WriteEndElement();
@@ -93,9 +95,11 @@ namespace SFS
                 senior.InnerText = sen;
                 Championshipp.AppendChild(senior);
 
-                XmlNode res = doc.CreateElement("Results");
-                res.InnerText = "0";
-                Championshipp.AppendChild(res);
+
+
+                XmlNode na = doc.CreateElement("Name");
+                na.InnerText = name.Text;
+                Championshipp.AppendChild(na);
 
                 doc.DocumentElement.AppendChild(Championshipp);
                 doc.Save("Championships.xml");

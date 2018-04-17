@@ -516,7 +516,9 @@
     <Resource Include="questionM.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Championships.xml" />
+    <Resource Include="Championships.xml">
+      <SubType>Designer</SubType>
+    </Resource>
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Employees.xml" />
@@ -561,6 +563,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="omar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cross.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

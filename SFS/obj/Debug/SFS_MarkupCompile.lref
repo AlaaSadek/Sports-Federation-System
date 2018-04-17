@@ -1,10 +1,13 @@
 ﻿
 
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\AccountingOptionForm.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add Expense.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_Championship.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_Club.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_Employee.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_Options.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_Player.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_PlayerResults.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add__Team.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\AGE.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Bsponsor.xaml;;
@@ -28,11 +31,14 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_PlayerMob
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_SalaryBonus.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_TeamName.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\EmployeeEmploymentDateDG.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\employeelogin.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\EmployeesDepartmentDataG.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\EmployeesDepartmentQuery.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\EmploymentdurationQuery.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Enter_ID.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Enter_ID_Employee.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\getExpenseMonth.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Loginas.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\mainqueryform.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\MainWindow.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Options.xaml;;
@@ -51,10 +57,4 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Employe
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Sponser.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\TeamChampionShipsQuery.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\typech.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Loginas.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\employeelogin.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\AccountingOptionForm.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add Expense.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\getExpenseMonth.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Add_PlayerResults.xaml;;
 

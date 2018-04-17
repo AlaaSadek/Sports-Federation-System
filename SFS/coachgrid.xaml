@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SFS"
         mc:Ignorable="d"
         Title="coachgrid" Height="350" Width="500">
-    <Grid>
+    <Grid Margin="0,0,0.333,0.333">
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
@@ -20,8 +20,11 @@
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="label" Content="Coach" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="87" Margin="188,63,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
-        <DataGrid x:Name="coach" HorizontalAlignment="Left" VerticalAlignment="Top" Height="193" Width="281" Margin="104,105,0,0"/>
+        <Label x:Name="label" Content="Coach" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="87" Margin="188,38,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="137,118,0,0"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="192" VerticalAlignment="Top" Width="100" Margin="236,118,0,0"/>
+        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="158,92,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Label x:Name="results" Content="Results" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="252,92,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
 
     </Grid>
 </Window>
