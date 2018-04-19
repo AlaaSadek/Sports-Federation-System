@@ -26,34 +26,9 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text =="")
-            {
-                MessageBox.Show("Please fill the required information");
-            }
-            List<string> name = new List<string>();
-            List<string> place = new List<string>();
-            List<string> type = new List<string>();
-            List<string> senior = new List<string>();
-            List<int> results = new List<int>();
-            for (int i = 0; i < Containers.championship_list.Count; i++)
-            {
-                if (Containers.championship_list[i].GetPlace() == textBox.Text)
-                {
-                    name.Add(Containers.championship_list[i].getName());
-                    place.Add(Containers.championship_list[i].GetPlace());
-                    type.Add(Containers.championship_list[i].Gettype());
-                    senior.Add(Containers.championship_list[i].getSenior());
-                    results.Add(Containers.championship_list[i].Getresults());
-                }
-            }
-            listBox.ItemsSource = name;
-            listBox1.ItemsSource = type;
-            listBox2.ItemsSource = place;
-            listBox3.ItemsSource = senior;
-            listBox4.ItemsSource = results;
-
-        
-
+            displayOptions m = new displayOptions();
+            m.Show();
+            this.Close();
     }
         private void button2_Click(object sender, RoutedEventArgs e)
         {

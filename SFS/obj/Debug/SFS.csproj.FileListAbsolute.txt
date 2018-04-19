@@ -80,7 +80,6 @@ C:\Users\Dell\Documents\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS.pdb
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\App.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS_MarkupCompile.cache
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS_MarkupCompile.lref
-\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\ChampionshipTeamsDatagrid.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeeEmploymentDateDG.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeesDepartmentDataG.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeesDepartmentQuery.g.cs
@@ -101,7 +100,6 @@ C:\Users\Dell\Documents\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS.pdb
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\placech.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\playersfiltration.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\typech.baml
-\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\ChampionshipTeamsDatagrid.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeeEmploymentDateDG.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeesDepartmentDataG.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\EmployeesDepartmentQuery.baml

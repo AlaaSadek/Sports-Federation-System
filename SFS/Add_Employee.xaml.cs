@@ -386,6 +386,13 @@ namespace SFS
         {
 
         }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            Options o = new Options();
+                o.Show();
+            this.Close();
+        }
     }
     }
 

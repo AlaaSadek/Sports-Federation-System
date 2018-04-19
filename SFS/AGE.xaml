@@ -14,34 +14,31 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="402,94.333,0,0" Grid.Row="1" Height="60" Click="button_Click">
+        <Button x:Name="button" Content="" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="402,94.333,0,0" Grid.Row="1" Height="60" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="questionM.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,94.333,0,0" Grid.Row="1" Height="60" Click="button1_Click">
+        <Button x:Name="button1" Content="" BorderThickness="0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,94.333,0,0" Grid.Row="1" Height="60" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
         <Label x:Name="label" Content="CHOOSE :" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="124" Margin="28,51,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
-        <ComboBox x:Name="age1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="179,58,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="25" SelectionChanged="age1_SelectionChanged">
-            <ComboBox.Background>
-                <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
-                    <GradientStop Color="#FFF3F3F3" Offset="0"/>
-                    <GradientStop Color="#FFEBEBEB" Offset="0.5"/>
-                    <GradientStop Color="#FFDDDDDD" Offset="0.5"/>
-                    <GradientStop Color="#FF0F0C0C" Offset="1"/>
-                </LinearGradientBrush>
-            </ComboBox.Background>
+        <ComboBox x:Name="age1" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="179,56,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="32" SelectionChanged="age1_SelectionChanged">
             <ComboBoxItem>JUNIOR</ComboBoxItem>
             <ComboBoxItem>SENIOR</ComboBoxItem>
         </ComboBox>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="181" VerticalAlignment="Top" Width="78" Margin="127,130,0,0" Grid.RowSpan="2" FontSize="13" FontFamily="Traditional Arabic"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="181" VerticalAlignment="Top" Width="62" Margin="301,130,0,0" Grid.RowSpan="2" FontSize="13" FontFamily="Traditional Arabic"/>
-        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="141,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
-        <Label x:Name="age" Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="312,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="181" VerticalAlignment="Top" Width="78" Margin="126,130,0,0" Grid.RowSpan="2" FontSize="13" FontFamily="Traditional Arabic"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="181" VerticalAlignment="Top" Width="62" Margin="304,130,0,0" Grid.RowSpan="2" FontSize="13" FontFamily="Traditional Arabic"/>
+        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Label x:Name="age" Content="Age" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="301,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
         <ListBox x:Name="listBox2" HorizontalAlignment="Left" Width="100" Margin="204,130,0,10.333" Grid.RowSpan="2" FontSize="13" FontFamily="Traditional Arabic"/>
-        <Label x:Name="Team_Name" Content="Team Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="208,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Label x:Name="Team_Name" Content="Team Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="188,107,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Button x:Name="exit" Content="" HorizontalAlignment="Left" Width="30" Height="Auto" BorderThickness="0" Margin="0,0,0,129.667" Click="button1_Click" RenderTransformOrigin="0.5,0.506">
+            <Button.Background>
+                <ImageBrush ImageSource="wrongg.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

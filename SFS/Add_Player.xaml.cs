@@ -53,7 +53,7 @@ namespace SFS
                 med = "YES";
             else med = "NO";
             string temp = Date.Text;
-            string temp2 = Name.Text;
+            string temp2 = player_name.Text;
             string id = temp2[0].ToString() + temp2[1].ToString() + temp[6].ToString() + temp[7].ToString();
             bool mobile = false;
             for (int i = 0; i < Containers.Player_list.Count(); i++)
@@ -61,7 +61,7 @@ namespace SFS
                 if (Containers.Player_list[i].getmobile() == Number.Text)
                     mobile = true;
             }
-                if (Name.Text == "" || Number.Text == "" ||  team_name.Text == "" || Date.Text == "" )
+                if (player_name.Text == "" || Number.Text == "" ||  team_name.Text == "" || Date.Text == "" )
             {
                 MessageBox.Show("Please fill the required information !");
             }
@@ -87,7 +87,7 @@ namespace SFS
                 document.WriteStartElement("Player");
 
                 document.WriteStartElement("Player_Name");
-                document.WriteString(Name.Text);
+                document.WriteString(player_name.Text);
                 document.WriteEndElement();
 
                 document.WriteStartElement("Player_ID");
@@ -143,7 +143,7 @@ namespace SFS
                 XmlNode playerr = doc.CreateElement("Player");
 
                 XmlNode Player_Name = doc.CreateElement("Player_Name");
-                Player_Name.InnerText =Name.Text;
+                Player_Name.InnerText = player_name.Text;
                 playerr.AppendChild(Player_Name);
 
                 XmlNode ID = doc.CreateElement("Player_ID");
@@ -199,6 +199,13 @@ namespace SFS
         private void yes_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            Options o = new Options();
+            o.Show();
+            this.Close();
         }
     }
     }

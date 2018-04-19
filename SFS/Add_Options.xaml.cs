@@ -65,5 +65,12 @@ namespace SFS
             o.Show();
             this.Hide();
         }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            Options o = new Options();
+            o.Show();
+            this.Close();
+        }
     }
 }

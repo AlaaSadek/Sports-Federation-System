@@ -35,9 +35,9 @@ namespace SFS
                 }
                
             }
-            ChampionshipTeamsDatagrid cd = new ChampionshipTeamsDatagrid();
-            cd.Show();
-            this.Close();
+            //ChampionshipTeamsDatagrid cd = new ChampionshipTeamsDatagrid();
+           // cd.Show();
+           // this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

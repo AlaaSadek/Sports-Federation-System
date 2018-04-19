@@ -62,7 +62,7 @@ List<int> tresult = new List<int>();
     
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            mainqueryform mq = new mainqueryform();
+            Options mq = new Options();
             mq.Show();
             this.Close();
         }

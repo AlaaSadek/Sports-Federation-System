@@ -100,9 +100,6 @@
     <Compile Include="Championships.cs" />
     <Compile Include="Championships_players.cs" />
     <Compile Include="Championships_team_.cs" />
-    <Compile Include="ChampionshipTeamsDatagrid.xaml.cs">
-      <DependentUpon>ChampionshipTeamsDatagrid.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Club.cs" />
     <Compile Include="Coach.cs" />
     <Compile Include="coachgrid.xaml.cs">
@@ -298,10 +295,6 @@
     <Page Include="Bsponsor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ChampionshipTeamsDatagrid.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="coachgrid.xaml">
       <SubType>Designer</SubType>
@@ -612,6 +605,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="sports.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wrong.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wrongg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
