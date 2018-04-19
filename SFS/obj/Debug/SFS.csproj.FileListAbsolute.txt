@@ -276,3 +276,8 @@ C:\Users\Dell\Documents\GitHub\New folder\Sports-Federation-System\SFS\obj\Debug
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\TeamPlayers.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_EmployeePassword.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_EmployeePassword.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\bin\Debug\MaterialDesignColors.dll
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\bin\Debug\MaterialDesignThemes.Wpf.dll
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\bin\Debug\MaterialDesignThemes.Wpf.pdb
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\bin\Debug\MaterialDesignThemes.Wpf.xml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\App.baml

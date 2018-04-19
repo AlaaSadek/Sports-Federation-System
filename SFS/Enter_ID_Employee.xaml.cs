@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -11,6 +8,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Drawing;
+using System.Data;
 
 namespace SFS
 {
@@ -27,14 +30,37 @@ namespace SFS
 
         private void delete_Click(object sender, RoutedEventArgs e)
         {
-            /* for(int i=0;i<Employees.count;i++)
+            employeeeid = id.Text;
+
+            bool find = false;
+            for (int i = 0; i < Containers.Employee_list.Count; i++)
             {
-                if(Employees[i].ID==id.Text)
+                if (Containers.Employee_list[i].getId() == id.Text)
                 {
-                    Employees.remove(players[i]);
+                    Containers.Employee_list.Remove(Containers.Employee_list[i]);
+                    find = true;
                 }
-            }*/
-            MessageBox.Show("Successfuly Deleted");
+            }
+            if (find == false)
+            {
+                MessageBox.Show("Wrong ID");
+            }
+            else
+            {
+
+                if (File.Exists("Employees.xml"))
+                {
+                    File.Delete("Employees.xml");
+                }
+
+                for (int i = 0; i < Containers.Employee_list.Count; i++)
+                {
+                    Containers.write_Employee(Containers.Employee_list[i]);
+
+                }
+
+                MessageBox.Show("Employee Successfuly Deleted");
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
