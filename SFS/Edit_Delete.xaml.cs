@@ -36,11 +36,13 @@ namespace SFS
             {
                 Enter_ID ei = new Enter_ID();
                 ei.Show();
+                this.Hide();
             }
            else if (choose.Text == "Employee")
             {
                 Enter_ID_Employee ei = new Enter_ID_Employee();
                 ei.Show();
+                this.Hide();
             }
 
         }

@@ -10,10 +10,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <TextBox x:Name="Department" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="150,85,0,0"/>
-        <TextBox x:Name="salary" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="152,124,0,0" TextChanged="textBox1_TextChanged"/>
-        <Label x:Name="label2_Copy11" Content="Department:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,77,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy" Content="Salary:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="0,111,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <TextBox x:Name="salary" HorizontalAlignment="Left" Height="22" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Margin="205,149,0,0" TextChanged="textBox1_TextChanged"/>
+        <Label x:Name="label2_Copy11" Content="New Department:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,101,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy" Content="Salary:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,149,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="394,258,0,0" Height="60" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Edit2.png"/>
@@ -24,6 +23,17 @@
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
+        <ComboBox x:Name="Department" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="205,104,0,0" FontSize="16" FontFamily="Traditional Arabic" >
+            <ComboBoxItem Content="HR"/>
+            <ComboBoxItem Content="Coach"/>
+            <ComboBoxItem Content="Accounting"/>
+        </ComboBox>
+        <Label x:Name="label2_Copy1" Content="Old Department:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="1,58,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <ComboBox x:Name="Old_Department" HorizontalAlignment="Left" VerticalAlignment="Top" Width="165" Margin="205,69,0,0" FontSize="16" FontFamily="Traditional Arabic" >
+            <ComboBoxItem Content="HR"/>
+            <ComboBoxItem Content="Coach"/>
+            <ComboBoxItem Content="Accounting"/>
+        </ComboBox>
 
     </Grid>
 </Window>

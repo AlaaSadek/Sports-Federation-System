@@ -131,7 +131,6 @@ C:\Users\Dell\Documents\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS.pdb
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_Player.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_PlayerMediacalForm.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_PlayerMobileNumber.g.cs
-\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_SalaryBonus.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_TeamName.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Enter_ID.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Enter_ID_Employee.g.cs
@@ -150,7 +149,6 @@ C:\Users\Dell\Documents\GitHub\Sports-Federation-System\SFS\obj\Debug\SFS.pdb
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_Player.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_PlayerMediacalForm.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_PlayerMobileNumber.baml
-\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_SalaryBonus.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_TeamName.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Enter_ID.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Enter_ID_Employee.baml
@@ -274,3 +272,7 @@ C:\Users\Dell\Documents\GitHub\New folder\Sports-Federation-System\SFS\obj\Debug
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\displayOptions.baml
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\searchbyname.g.cs
 \\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\searchbyname.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\TeamPlayers.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\TeamPlayers.baml
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_EmployeePassword.g.cs
+\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\obj\Debug\Edit_EmployeePassword.baml

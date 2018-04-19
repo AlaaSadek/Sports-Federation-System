@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="85,263,0,0" VerticalAlignment="Top" Width="75" Height="48">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="85,263,0,0" VerticalAlignment="Top" Width="75" Height="48" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>

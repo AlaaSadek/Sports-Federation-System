@@ -13,6 +13,7 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\AGE.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Bsponsor.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\ChampionshipTeamsDatagrid.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\coachgrid.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\displayOptions.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Display_Championshsips.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Display_Club.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Display_Coaches.xaml;;
@@ -28,7 +29,6 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_MobileNum
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_Player.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_PlayerMediacalForm.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_PlayerMobileNumber.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_SalaryBonus.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_TeamName.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\EmployeeEmploymentDateDG.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\employeelogin.xaml;;
@@ -49,6 +49,8 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\PlayersInEachT
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\QueryChampionShips(RESULTS).xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\SalaryQuery.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\SalaryQueryDataGrid.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\searchbyname.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\searchoptions.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Accounting.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Championship.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_club.xaml;;
@@ -56,8 +58,7 @@ F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_coach.x
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Employee.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Search_Sponser.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\TeamChampionShipsQuery.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\TeamPlayers.xaml;;
 F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\typech.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\searchoptions.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\displayOptions.xaml;;
-F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\searchbyname.xaml;;
+F\\vmware-host\Shared Folders\GitHub\Sports-Federation-System\SFS\Edit_EmployeePassword.xaml;;
 

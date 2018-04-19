@@ -70,5 +70,12 @@ namespace SFS
             this.Close();
 
         }
+
+        private void button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Loginas lag = new Loginas();
+            lag.Show();
+            this.Close();
+        }
     }
 }

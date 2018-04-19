@@ -17,8 +17,6 @@ using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.Drawing;
 using System.Data;
-
-
 namespace SFS
 {
     /// <summary>
@@ -86,7 +84,8 @@ namespace SFS
                     Containers.write_Employee(Containers.Employee_list[i]);
 
                 }
-                MessageBox.Show("Done Changes");
+                MessageBox.Show("Changes Done");
+                this.Hide();
             }
 
         }

@@ -14,4 +14,11 @@
     <Results>250</Results>
     <Name>Heliopolis</Name>
   </Result>
+  <Result>
+    <Player_ID>sa01</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Alex</Championship_Place>
+    <Results>40</Results>
+    <Name>Swimming</Name>
+  </Result>
 </Results>

@@ -8,6 +8,6 @@ namespace SFS
 {
     class Championships_team_:Championships
     {
-        public List<Team> teamList;
+        private List<Team> teamList;
     }
 }

@@ -5,7 +5,7 @@
     <Employment_ID>Mo89</Employment_ID>
     <Mobile_Number>0101020233</Mobile_Number>
     <Gender>Male</Gender>
-    <Medical_Form>NO</Medical_Form>
+    <Medical_Form>Male</Medical_Form>
     <Salary>3000</Salary>
     <Bonus>30</Bonus>
     <Employement_Date>4/16/2010</Employement_Date>
@@ -13,12 +13,12 @@
     <Date_of_birth>4/1/1989</Date_of_birth>
     <Available>Yes</Available>
     <Department>HR</Department>
-    <Password>90000</Password>
+    <Password>4000</Password>
   </Employee>
   <Employee>
     <Employee_Name>Ahmed</Employee_Name>
     <Employeement_ID>Ah99</Employeement_ID>
-    <Mobile_Number>0101020233</Mobile_Number>
+    <Mobile_Number>01063500989</Mobile_Number>
     <Gender>Male</Gender>
     <Medical_Form>NO</Medical_Form>
     <Salary>5000</Salary>
@@ -26,14 +26,14 @@
     <Employement_Date>6/17/2014</Employement_Date>
     <Working_Years>4</Working_Years>
     <Date_of_birth>2/1/1999</Date_of_birth>
-    <Available>No</Available>
-    <Department>Coach</Department>
+    <Available>Available</Available>
+    <Department>2000</Department>
     <Password>9000</Password>
   </Employee>
   <Employee>
     <Employee_Name>Ahmed</Employee_Name>
     <Employeement_ID>Ah99</Employeement_ID>
-    <Mobile_Number>0101020233</Mobile_Number>
+    <Mobile_Number>01063500989</Mobile_Number>
     <Gender>Male</Gender>
     <Medical_Form>NO</Medical_Form>
     <Salary>5000</Salary>
@@ -41,14 +41,14 @@
     <Employement_Date>6/17/2014</Employement_Date>
     <Working_Years>4</Working_Years>
     <Date_of_birth>2/1/1999</Date_of_birth>
-    <Available>No</Available>
-    <Department>Coach</Department>
+    <Available>Available</Available>
+    <Department>2000</Department>
     <Password>9000</Password>
   </Employee>
   <Employee>
     <Employee_Name>Karim</Employee_Name>
     <Employeement_ID>Ka91</Employeement_ID>
-    <Mobile_Number>01089789</Mobile_Number>
+    <Mobile_Number>010987901</Mobile_Number>
     <Gender>Male</Gender>
     <Medical_Form>NO</Medical_Form>
     <Salary>2000</Salary>

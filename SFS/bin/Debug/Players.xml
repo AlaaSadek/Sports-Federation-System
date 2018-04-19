@@ -3,13 +3,13 @@
   <Player>
     <Player_Name>salma</Player_Name>
     <Player_ID>sa01</Player_ID>
-    <Mobile_Number>010012202001</Mobile_Number>
+    <Mobile_Number>01067890090</Mobile_Number>
     <Gender>Female</Gender>
-    <Medical_Form>NO</Medical_Form>
-    <Salary>0</Salary>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>3000</Salary>
     <Bonus>0</Bonus>
     <Date_of_birth>4/15/2018</Date_of_birth>
-    <Team_Name>heliopolis</Team_Name>
+    <Team_Name>Shams</Team_Name>
     <Coach_Name>mr.hawhaw</Coach_Name>
   </Player>
   <Player>

@@ -79,7 +79,8 @@ namespace SFS
                     Containers.write_Player(Containers.Player_list[i]);
 
                 }
-                MessageBox.Show("Done Changes");
+                MessageBox.Show("Changes Done");
+                this.Hide();
             }
 
         }

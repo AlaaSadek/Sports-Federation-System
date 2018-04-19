@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="81,266,0,0" VerticalAlignment="Top" Width="75" Height="45">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Margin="81,266,0,0" VerticalAlignment="Top" Width="75" Height="45" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
@@ -25,14 +25,14 @@
                 <ImageBrush ImageSource="view.png"/>
             </Button.Background>
         </Button>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="138" Margin="44,113,0,0" VerticalAlignment="Top" Width="100"/>
-        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="138" Margin="144,113,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="138" Margin="48,113,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="138" Margin="146,113,0,0" VerticalAlignment="Top" Width="100"/>
         <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="138" Margin="244,113,0,0" VerticalAlignment="Top" Width="100"/>
-        <ListBox x:Name="listBox3" HorizontalAlignment="Left" Height="138" Margin="344,113,0,0" VerticalAlignment="Top" Width="100"/>
+        <ListBox x:Name="listBox3" HorizontalAlignment="Left" Height="138" Margin="342,113,0,0" VerticalAlignment="Top" Width="100"/>
         <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="23" Margin="133,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="textBox_TextChanged"/>
         <Label x:Name="label" Content="Enter ID:&#xD;&#xA;" HorizontalAlignment="Left" Margin="25,29,0,0" VerticalAlignment="Top" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="name" Content="Working&#xD;&#xA;    Year" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="58,71,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Width="107"/>
-        <Label x:Name="name_Copy" Content="Employment &#xD;&#xA;      date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,70,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Label x:Name="name_Copy" Content="Employment &#xD;&#xA;      date" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="148,70,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Height="54"/>
         <Label x:Name="name_Copy1" Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="261,84,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
         <Label x:Name="name_Copy2" Content="Department" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="349,83,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Width="95"/>
     </Grid>

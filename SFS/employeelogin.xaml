@@ -12,7 +12,6 @@
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
         <TextBox x:Name="login" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="280,94,0,0"/>
-        <TextBox x:Name="pass" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Margin="280,130,0,0"/>
         <Label x:Name="label1" Content="Login:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,88,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="label2" Content="Password:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,121,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,251,0,0" Height="60" Click="button1_Click_1">
@@ -25,5 +24,6 @@
                 <ImageBrush ImageSource="omar.png"/>
             </Button.Background>
         </Button>
+        <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left" Margin="280,130,0,0" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>

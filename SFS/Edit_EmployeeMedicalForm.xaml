@@ -10,7 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Label x:Name="label2_Copy3" Content="Medical Form:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,118,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold" Height="43" Width="180"/>
+        <Label x:Name="label2_Copy3" Content="Medical Form:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="43,128,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold" Height="43" Width="180"/>
         <RadioButton x:Name="yes" Content="Yes" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="223,128,0,0" FontSize="22" FontFamily="Traditional Arabic" FontWeight="Bold"/>
         <RadioButton x:Name="no" Content="No" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,128,0,0" Checked="radioButton1_Checked" FontSize="22" FontFamily="Traditional Arabic" FontWeight="Bold"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="12,263,0,0" Click="button_Click" Height="57">

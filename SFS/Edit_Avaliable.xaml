@@ -12,13 +12,13 @@
         </Grid.Background>
         <RadioButton x:Name="yes" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="120,118,0,0"/>
         <RadioButton x:Name="no" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="184,118,0,0"/>
-        <Label x:Name="label2_Copy11" Content="Avaliable:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="2,106,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="62" Margin="330,282,0,0" Height="36" Click="button1_Click">
+        <Label x:Name="label2_Copy11" Content="Avaliable:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="8,107,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Margin="400,262,0,0" Height="58" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Edit2.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button_Copy" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="46" Margin="1,274,0,0" Click="button_Copy_Click">
+        <Button x:Name="button_Copy" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="93" Height="60" Margin="1,260,0,0" Click="button_Copy_Click">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>

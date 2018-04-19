@@ -15,6 +15,7 @@
             <ComboBoxItem>Salary</ComboBoxItem>
             <ComboBoxItem>Avaliable</ComboBoxItem>
             <ComboBoxItem>Department</ComboBoxItem>
+            <ComboBoxItem>Password</ComboBoxItem>
         </ComboBox>
         <Button x:Name="button1_Copy2" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="70" Margin="421,271,0,0" Click="button1_Click" Height="48" BorderThickness="0">
             <Button.Background>

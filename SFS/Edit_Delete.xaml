@@ -13,9 +13,6 @@
         <ComboBox x:Name="choose" Margin="138,129,19,208" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem>Employee</ComboBoxItem>
             <ComboBoxItem>Player</ComboBoxItem>
-            <ComboBoxItem>Club</ComboBoxItem>
-            <ComboBoxItem>Championship</ComboBoxItem>
-            <ComboBoxItem>Team</ComboBoxItem>
         </ComboBox>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="91" Height="69" Margin="1,322,0,0" Click="button_Click">
             <Button.Background>

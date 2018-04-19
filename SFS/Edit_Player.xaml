@@ -18,7 +18,6 @@
         <ComboBox x:Name="choose" Margin="98,92,177,199" SelectionChanged="ComboBox_SelectionChanged">
             <ComboBoxItem>Mobile_Number</ComboBoxItem>
             <ComboBoxItem>Medical_Form</ComboBoxItem>
-            <ComboBoxItem>Salary</ComboBoxItem>
             <ComboBoxItem>Team_Name</ComboBoxItem>
             <ComboBoxItem>Results</ComboBoxItem>
         </ComboBox>

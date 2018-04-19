@@ -11,7 +11,12 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using System.Xml;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Drawing;
+using System.Data;
 namespace SFS
 {
     /// <summary>
@@ -40,11 +45,22 @@ namespace SFS
                     if (Containers.Employee_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
                     {
                         Containers.Employee_list[i].setDepartment(Department.Text);
-                        Containers.Employee_list[i].setDepartment(salary.Text);
+                        Containers.Employee_list[i].setSalary(float.Parse(salary.Text));
                     }
 
                 }
-                MessageBox.Show("Done Changes");
+                if (File.Exists("Employees.xml"))
+                {
+                    File.Delete("Employees.xml");
+                }
+
+                for (int i = 0; i < Containers.Employee_list.Count; i++)
+                {
+                    Containers.write_Employee(Containers.Employee_list[i]);
+
+                }
+                MessageBox.Show("Changes Done");
+                this.Hide();
             }
 
 

@@ -39,7 +39,7 @@ namespace SFS
 
         for(int i=0;i<Containers.Employee_list.Count;i++)
             {
-                if(Containers.Employee_list[i].getId()== login.Text && Containers.Employee_list[i].Getpassword() == pass.Text)
+                if(Containers.Employee_list[i].getId()== login.Text && Containers.Employee_list[i].Getpassword() == passwordBox.Password)
                 {
                     MessageBox.Show("Login Successfuly.");
                     if(Containers.Employee_list[i].GetDepartment()=="HR")

@@ -137,6 +137,9 @@
     <Compile Include="Edit_EmployeeMedicalForm.xaml.cs">
       <DependentUpon>Edit_EmployeeMedicalForm.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Edit_EmployeePassword.xaml.cs">
+      <DependentUpon>Edit_EmployeePassword.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Edit_MobileNumberEmployee.xaml.cs">
       <DependentUpon>Edit_MobileNumberEmployee.xaml</DependentUpon>
     </Compile>
@@ -148,9 +151,6 @@
     </Compile>
     <Compile Include="Edit_PlayerMobileNumber.xaml.cs">
       <DependentUpon>Edit_PlayerMobileNumber.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_SalaryBonus.xaml.cs">
-      <DependentUpon>Edit_SalaryBonus.xaml</DependentUpon>
     </Compile>
     <Compile Include="Edit_TeamName.xaml.cs">
       <DependentUpon>Edit_TeamName.xaml</DependentUpon>
@@ -240,6 +240,9 @@
     <Compile Include="Team.cs" />
     <Compile Include="TeamChampionShipsQuery.xaml.cs">
       <DependentUpon>TeamChampionShipsQuery.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TeamPlayers.xaml.cs">
+      <DependentUpon>TeamPlayers.xaml</DependentUpon>
     </Compile>
     <Compile Include="typech.xaml.cs">
       <DependentUpon>typech.xaml</DependentUpon>
@@ -344,6 +347,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Edit_EmployeePassword.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Edit_MobileNumberEmployee.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -357,10 +364,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Edit_PlayerMobileNumber.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Edit_SalaryBonus.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -489,6 +492,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="TeamPlayers.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="typech.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -593,6 +600,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="view.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="sports.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

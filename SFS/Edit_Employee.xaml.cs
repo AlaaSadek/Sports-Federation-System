@@ -30,27 +30,38 @@ namespace SFS
             {
                 Edit_MobileNumberEmployee ee = new Edit_MobileNumberEmployee();
                 ee.Show();
+                this.Hide();
             }
           
             else if (choose.Text == "Salary")
             {
                 Edit_DepartmentSalaryBonus z = new Edit_DepartmentSalaryBonus();
                 z.Show();
+                this.Hide();
             }
             else if (choose.Text == "Bonus")
             {
                 Edit_DepartmentSalaryBonus z = new Edit_DepartmentSalaryBonus();
                 z.Show();
+                this.Hide();
             }
             else if (choose.Text == "Department")
             {
                 Edit_DepartmentSalaryBonus z = new Edit_DepartmentSalaryBonus();
                 z.Show();
+                this.Hide();
             }
             else if (choose.Text == "Avaliable")
             {
                 Edit_Avaliable g = new Edit_Avaliable();
                 g.Show();
+                this.Hide();
+            }
+            else if(choose.Text== "Password")
+            {
+                Edit_EmployeePassword ee = new Edit_EmployeePassword();
+                ee.Show();
+                this.Hide();
             }
         }
 

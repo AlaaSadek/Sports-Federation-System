@@ -58,7 +58,15 @@ namespace SFS
             listBox.ItemsSource = tName;
             listBox1.ItemsSource = tprice;
             listBox2.ItemsSource = tindex;
+            textBox.Text = tName[0];
 
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            mainqueryform m = new mainqueryform();
+            m.Show();
+            this.Close();
         }
     }
 }
