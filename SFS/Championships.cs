@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -28,6 +28,13 @@ namespace SFS
             type = Type;
             senior = sn;
             
+        }
+        public Championships(string type, string place, int result, string name)
+        {
+            this.type = type;
+            this.place = place;
+            this.results = result;
+            this.Name = name;
         }
         public void setPlace(string place)
         {
@@ -65,6 +72,13 @@ namespace SFS
         {
             return this.type;
         }
-
+        public void setSenior(string senior)
+        {
+            this.senior = senior;
+        }
+        public string getSenior()
+        {
+            return this.senior;
+        }
     }
 }

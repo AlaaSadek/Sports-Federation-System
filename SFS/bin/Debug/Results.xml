@@ -1,37 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Results>
   <Result>
-    <Championship_Type>Cairo</Championship_Type>
-    <Results>10</Results>
-  </Result>
-  <Result>
-    <Championship_Type>Official</Championship_Type>
+    <Player_ID>La10</Player_ID>
+    <Championship_Type>NON-OFFICIAL</Championship_Type>
     <Championship_Place>cairo</Championship_Place>
-    <Results>20</Results>
+    <Results>200</Results>
+    <Name>Heliopolis</Name>
   </Result>
   <Result>
-    <Championship_Type>official</Championship_Type>
+    <Player_ID>sa01</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
     <Championship_Place>cairo</Championship_Place>
-    <Results>20</Results>
-  </Result>
-  <Result>
-    <Championship_Type>Official</Championship_Type>
-    <Championship_Place>cairo</Championship_Place>
-    <Results>2000</Results>
-  </Result>
-  <Result>
-    <Championship_Type>official</Championship_Type>
-    <Championship_Place>Alex</Championship_Place>
-    <Results>400</Results>
-  </Result>
-  <Result>
-    <Championship_Type>Not  official</Championship_Type>
-    <Championship_Place>sharm</Championship_Place>
-    <Results>900</Results>
-  </Result>
-  <Result>
-    <Championship_Type>Official</Championship_Type>
-    <Championship_Place>Italiy</Championship_Place>
-    <Results>21</Results>
+    <Results>250</Results>
+    <Name>Heliopolis</Name>
   </Result>
 </Results>

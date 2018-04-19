@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +20,7 @@ namespace SFS
         public static List<Team> Team_list = new List<Team>();
         public static List<Championships> championship_list = new List<Championships>();
         public static List<Coach> Coach_list = new List<Coach>();
+        public static List<Championships_players> Players_results = new List<Championships_players>();
 
         public static void Read_Players()
         {
@@ -54,6 +55,26 @@ namespace SFS
                 string ccval = list_2[9].InnerText;
                 Player p = new Player(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, tval,ccval);
                 Player_list.Add(p);
+            }
+            w.Close();
+        }
+        public static void Read_Sponsor()
+        {
+            Containers.Sponsor_list.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Sponsers.xml");
+            XmlNodeList list = doc.GetElementsByTagName("Sponser");
+            FileStream w = new FileStream("Sponsers.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string Name = list_2[0].Name;
+                string nvalue = list_2[0].InnerText;
+                String price = list_2[1].Name;
+                String pvalue = list_2[1].InnerText;
+             
+                Sponsers t = new Sponsers(nvalue, int.Parse(pvalue));
+                Sponsor_list.Add(t);
             }
             w.Close();
         }
@@ -213,6 +234,45 @@ namespace SFS
                 Team_list.Add(t);
             }
             w.Close();
+        }
+        public static void read_players_results()
+        {
+            Containers.Players_results.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Results.xml");
+            XmlNodeList list = doc.GetElementsByTagName("Result");
+            FileStream w = new FileStream("Results.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string player_ID = list_2[0].Name;
+                string ivalue = list_2[0].InnerText;
+
+                string Championship_type = list_2[1].Name;
+                string ctvalue = list_2[1].InnerText;
+
+                string Championship_place = list_2[2].Name;
+                string cpvalue = list_2[2].InnerText;
+
+                string results = list_2[3].Name;
+                string reval = list_2[3].InnerText;
+
+                string name = list_2[4].Name;
+                string naval = list_2[4].InnerText;
+
+
+                for (int l=0;l< Player_list.Count;l++)
+                {
+                    if(Player_list[l].getId()==ivalue)
+                    {
+                        Championships c = new Championships(cpvalue, ctvalue, int.Parse(reval), naval);
+                        Player_list[l].champion.Add(c);
+                        Player_list[l].set_results(Player_list[l].get_results() +int.Parse( reval));
+                    }
+                }
+            }
+            w.Close();
+
         }
         public static void write_Player(Player p)
         {

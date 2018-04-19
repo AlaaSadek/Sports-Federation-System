@@ -10,8 +10,7 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <Label x:Name="label" Content="Best Sponsor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="144" Margin="164,42,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
-        <DataGrid x:Name="bestsponsor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="206" Width="281" Margin="102,87,0,0"/>
+        <Label x:Name="label" Content="Best Sponsor" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Width="144" Margin="165,55,0,0" FontSize="22" FontWeight="Bold" FontFamily="Traditional Arabic"/>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="408,251,0,0" Height="60" Click="button_Click">
             <Button.Background>
                 <ImageBrush ImageSource="questionM.png"/>
@@ -22,6 +21,11 @@
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
+        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="100" Margin="164,121,0,0"/>
+        <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="100" Margin="262,121,0,0"/>
+        <Label x:Name="name" Content="Name" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="180,97,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <Label x:Name="price" Content="Price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,98,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold"/>
+        <ListBox x:Name="listBox2" HorizontalAlignment="Left" Height="172" VerticalAlignment="Top" Width="19" Margin="146,121,0,0"/>
 
     </Grid>
 </Window>

@@ -26,7 +26,7 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            
             List<Championships> l = Containers.championship_list;
             List<string> ttype = new List<string>();
             List<string> tplace = new List<string>();
@@ -45,7 +45,8 @@ namespace SFS
             listBox1.ItemsSource = tplace;
 
         }
-
+        
+           
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             mainqueryform mq = new mainqueryform();

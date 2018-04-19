@@ -26,12 +26,14 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-               List<Sponsers> x =Containers.Sponsor_list;
+            
+
+            List<Sponsers> x =Containers.Sponsor_list;
             for (int i = 0; i < x.Count; i++)
             {
                 for (int j = i + 1; j < x.Count; j++)
                 {
-                    if (x[i].GetSponsor_price() > x[j].GetSponsor_price())
+                    if (x[i].GetSponsor_price() < x[j].GetSponsor_price())
                     {
                         Sponsers tmp = x[i];
                         x[i] = x[j];
@@ -39,6 +41,24 @@ namespace SFS
                     }
                 }
         }
+            List<string> tName = new List<string>();
+            List<int> tprice = new List<int>();
+            List<int> tindex = new List<int>();
+
+
+            for (int i = 0; i < x.Count; i++)
+            {
+                tindex.Add(i+1);
+                tName.Add(x[i].GetSponser_name());
+                tprice.Add(x[i].GetSponsor_price());
+            }
+
+
+
+            listBox.ItemsSource = tName;
+            listBox1.ItemsSource = tprice;
+            listBox2.ItemsSource = tindex;
+
         }
     }
 }

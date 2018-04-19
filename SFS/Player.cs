@@ -9,9 +9,8 @@ namespace SFS
    class Player : Person
     {
         string TeamName;
-        // list of championships
         bool senior;
-        public List<Championships_players> champion = new List<Championships_players>();
+        public List<Championships> champion = new List<Championships>();
         int result;
         string CoachName;
    public  Player()

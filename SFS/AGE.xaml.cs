@@ -62,13 +62,20 @@ namespace SFS
               }
             List<int> tage = new List<int>();
             List<string> tname = new List<string>();
-            if (age1.Text == "SENIOR")
+            List<string> ttname = new List<string>();
+            if (age1.Text == "")
+            {
+                MessageBox.Show("Please select a choice !");
+            }
+              else  if (age1.Text == "SENIOR")
             {
 
                 for (int i = 0; i < seniors.Count; i++)
                 {
                     tage.Add(seniors[i].ageCalculator());
                     tname.Add(seniors[i].getName());
+                    ttname.Add(seniors[i].get_teamname());
+
                 }
 
             }
@@ -78,10 +85,14 @@ namespace SFS
                 {
                     tage.Add(juniors[i].ageCalculator());
                     tname.Add(juniors[i].getName());
+                    ttname.Add(juniors[i].get_teamname());
+
                 }
             }
             listBox.ItemsSource = tname;
                 listBox1.ItemsSource = tage;
+            listBox2.ItemsSource = ttname;
+
 
         }
 
@@ -104,6 +115,16 @@ namespace SFS
         {
 
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+          
+            mainqueryform mq = new mainqueryform();
+            mq.Show();
+            this.Close();
+
+        }
+    
     }
 }
 

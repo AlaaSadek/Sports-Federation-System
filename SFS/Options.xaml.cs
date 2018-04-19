@@ -52,8 +52,27 @@ namespace SFS
 
         private void button4_Click(object sender, RoutedEventArgs e)
         {
-            mainqueryform m = new mainqueryform();
-            m.Show();
+            mainqueryform mq = new mainqueryform();
+            mq.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+        }
+
+        private void button6_Click(object sender, RoutedEventArgs e)
+        {
+            displayOptions dp = new displayOptions();
+            dp.Show();
+            this.Close();
+
+        }
+
+        private void button5_Click_1(object sender, RoutedEventArgs e)
+        {
+            searchoptions os = new searchoptions();
+            os.Show();
             this.Close();
         }
     }

@@ -10,8 +10,13 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xml;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+using System.Drawing;
+using System.Data;
 
 namespace SFS
 {
@@ -23,18 +28,38 @@ namespace SFS
         public MainWindow()
         {
             InitializeComponent();
-         Containers.Read_Championships();
-            Containers.Read_Players();
-          Containers.Read_Employees();
-          Containers.Read_Clubs();
-          Containers.Read_Teams();
-           Containers.Read_Coach();
-            //  AGE a = new SFS.AGE();
-            //  a.Show();
-            //   mainqueryform f = new mainqueryform();
-            //   f.Show();
-            //  Options o = new Options();
-            //  o.Show();
+            if (File.Exists("Championships.xml"))
+            {
+                Containers.Read_Championships();
+            }
+            if (File.Exists("Players.xml"))
+            {
+                Containers.Read_Players();
+            }
+            if (File.Exists("Employees.xml"))
+            {
+                Containers.Read_Employees();
+            }
+            if (File.Exists("Clubs.xml"))
+            {
+                Containers.Read_Clubs();
+            }
+            if (File.Exists("Teams.xml"))
+            {
+                Containers.Read_Teams();
+            }
+            if (File.Exists("Coaches.xml"))
+            {
+                Containers.Read_Coach();
+            }
+            if (File.Exists("Results.xml"))
+            {
+                Containers.read_players_results();
+            }
+            if (File.Exists("Sponsers.xml"))
+            {
+                Containers.Read_Sponsor();
+            }
 
         }
 

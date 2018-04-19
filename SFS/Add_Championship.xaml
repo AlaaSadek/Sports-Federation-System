@@ -11,10 +11,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="backgrd.png"/>
         </Grid.Background>
-        <TextBox x:Name="type" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Margin="279,130,0,0"/>
-        <TextBox x:Name="place" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Margin="280,167,0,0"/>
-        <RadioButton x:Name="Senior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="219,219,0,0"/>
-        <RadioButton x:Name="junior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="315,220,0,0" RenderTransformOrigin="2.812,2.396"/>
+        <TextBox x:Name="place" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="284,167,0,0"/>
+        <RadioButton x:Name="Senior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="211,218,0,0"/>
+        <RadioButton x:Name="junior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="343,218,0,0" RenderTransformOrigin="2.812,2.396"/>
         <Button x:Name="add" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="90" Height="56" Margin="401,264,0,0" Click="add_Click">
             <Button.Background>
                 <ImageBrush ImageSource="Add.png"/>
@@ -28,10 +27,13 @@
         <Label x:Name="label2" Content="Type of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,121,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="label2_Copy" Content="Place of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,162,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="label2_Copy1" Content="Stage:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,201,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy2" Content="Senior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="235,207,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy3" Content="Junior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="332,205,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy2" Content="Senior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="231,205,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy3" Content="Junior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="364,205,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
         <Label x:Name="label2_Copy4" Content="Championship Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,78,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="137" Margin="278,86,0,0"/>
-
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="284,86,0,0"/>
+        <ComboBox x:Name="type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="285,129,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="25" FontWeight="Bold">
+            <ComboBoxItem Content="OFFICIAL" FontWeight="Bold"/>
+        <ComboBoxItem Content="NON-OFFICIAL" FontWeight="Bold"/>
+        </ComboBox>
     </Grid>
 </Window>

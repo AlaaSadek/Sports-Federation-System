@@ -34,7 +34,7 @@ namespace SFS
         {
             string coachname="";
             int x = int.Parse(result.Text);
-            if (type.Text == "" || result.Text == "")
+            if (typee.Text == "" || result.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
@@ -82,7 +82,7 @@ namespace SFS
                     document.WriteEndElement();
 
                     document.WriteStartElement("Championship_Type");
-                    document.WriteString(type.Text);
+                    document.WriteString(typee.Text);
                     document.WriteEndElement();
 
                     document.WriteStartElement("Championship_Place");
@@ -93,7 +93,9 @@ namespace SFS
                     document.WriteString(result.Text);
                     document.WriteEndElement();
 
-
+                    document.WriteStartElement("Name");
+                    document.WriteString(name1.Text);
+                    document.WriteEndElement();
 
                     document.WriteEndElement();
                     document.WriteEndElement();
@@ -112,9 +114,13 @@ namespace SFS
 
                     XmlNode resultt = doc.CreateElement("Result");
 
-                    XmlNode typee = doc.CreateElement("Championship_Type");
-                    typee.InnerText = type.Text;
-                    resultt.AppendChild(typee);
+                    XmlNode id = doc.CreateElement("Player_ID");
+                    id.InnerText = Enter_ID.playerid;
+                    resultt.AppendChild(id);
+
+                    XmlNode type = doc.CreateElement("Championship_Type");
+                    type.InnerText = typee.Text;
+                    resultt.AppendChild(type);
 
                     XmlNode placee = doc.CreateElement("Championship_Place");
                     placee.InnerText = place.Text;
@@ -123,6 +129,10 @@ namespace SFS
                     XmlNode res = doc.CreateElement("Results");
                     res.InnerText = result.Text;
                     resultt.AppendChild(res);
+
+                    XmlNode names = doc.CreateElement("Name");
+                    names.InnerText = name1.Text;
+                    resultt.AppendChild(names);
 
                     doc.DocumentElement.AppendChild(resultt);
                     doc.Save("Results.xml");

@@ -33,8 +33,8 @@ namespace SFS
         {
             string sen;
             if (Senior.IsChecked == true)
-                sen = "Yes";
-            else sen = "No";
+                sen = "Senior";
+            else sen = "Junior";
 
             if (type.Text == "" || (Senior.IsChecked == false && junior.IsChecked == false) || place.Text=="")
             {
@@ -81,7 +81,7 @@ namespace SFS
                 XmlDocument doc = new XmlDocument();
                 doc.Load("Championships.xml");
 
-                XmlNode Championshipp = doc.CreateElement("Championships");
+                XmlNode Championshipp = doc.CreateElement("Championship");
 
                 XmlNode typee = doc.CreateElement("Type_of_Championship");
                 typee.InnerText = type.Text;

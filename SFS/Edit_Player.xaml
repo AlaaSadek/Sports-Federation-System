@@ -22,7 +22,7 @@
             <ComboBoxItem>Team_Name</ComboBoxItem>
             <ComboBoxItem>Results</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="next" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="71" Margin="415,268,0,0" Click="button1_Click" Height="48" BorderThickness="0">
+        <Button x:Name="next" Content="" HorizontalAlignment="Left" Width="71" Margin="415,268,0,2.333" Click="button1_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="next.png"/>
             </Button.Background>

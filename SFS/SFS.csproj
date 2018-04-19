@@ -101,6 +101,9 @@
       <DependentUpon>coachgrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="Containers.cs" />
+    <Compile Include="displayOptions.xaml.cs">
+      <DependentUpon>displayOptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Display_Championshsips.xaml.cs">
       <DependentUpon>Display_Championshsips.xaml</DependentUpon>
     </Compile>
@@ -209,6 +212,12 @@
     <Compile Include="SalaryQueryDataGrid.xaml.cs">
       <DependentUpon>SalaryQueryDataGrid.xaml</DependentUpon>
     </Compile>
+    <Compile Include="searchbyname.xaml.cs">
+      <DependentUpon>searchbyname.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="searchoptions.xaml.cs">
+      <DependentUpon>searchoptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Search_Accounting.xaml.cs">
       <DependentUpon>Search_Accounting.xaml</DependentUpon>
     </Compile>
@@ -286,6 +295,10 @@
     <Page Include="coachgrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="displayOptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Display_Championshsips.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -440,6 +453,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="searchbyname.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="searchoptions.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Search_Accounting.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -569,6 +590,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="cross.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="view.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

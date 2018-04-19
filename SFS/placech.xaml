@@ -29,7 +29,7 @@
         <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="100" Grid.Column="1" Margin="222.333,109,0,0"/>
         <ListBox x:Name="listBox1" HorizontalAlignment="Left" Height="191" VerticalAlignment="Top" Width="100" Grid.Column="1" Margin="123.333,109,0,0" RenderTransformOrigin="2.472,1.595"/>
         <Label x:Name="place" Content="Place" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="150.333,82,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Grid.Column="1"/>
-        <Label x:Name="type" Content="Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="251.333,82,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Grid.Column="1"/>
+        <Label x:Name="type" Content="Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="242.333,82,0,0" FontSize="15" FontFamily="Traditional Arabic" FontWeight="Bold" Grid.Column="1"/>
 
     </Grid>
 </Window>
