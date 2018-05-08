@@ -30,5 +30,42 @@ namespace SFS
             op.Show();
             this.Close();
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            bool available = false;
+            List<string> expense_des = new List<string>();
+            List<int> expense_value = new List<int>();
+            for(int i=0;i<Expense.expense_list.Count();i++)
+            {
+                if(Expense.expense_list[i].get_expense_month()==expense_month.Text)
+                {
+                    available = true;
+                    expense_value.Add(Expense.expense_list[i].get_value());
+                    expense_des.Add(Expense.expense_list[i].get_expense_takenfor());
+                }
+            }
+            if (available == false)
+            {
+                MessageBox.Show("No expenses in this month !");
+            }
+            else
+            {
+                listBox.ItemsSource = expense_des;
+                listBox1.ItemsSource = expense_value;
+            }
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            AccountingOptionForm aa = new AccountingOptionForm();
+            aa.Show();
+            this.Close();
+        }
     }
 }

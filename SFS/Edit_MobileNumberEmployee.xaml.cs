@@ -38,56 +38,121 @@ namespace SFS
         {
             Edit_Employee ee = new Edit_Employee();
             ee.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            bool mobilee = false;
-            for (int i = 0; i < Containers.Player_list.Count(); i++)
-            {
-                if (Containers.Player_list[i].getmobile() == textBox1.Text)
-                    mobilee = true;
-            }
+
             
             if (textBox1.Text == "" || mobile.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
-            else if (mobilee == true)
+            else if (mobile.Text.Length != 11)
             {
-                MessageBox.Show("Mobile number is already registered !");
-            }
-            else if (textBox1.Text == mobile.Text)
-            {
-                MessageBox.Show("Please enter a diffrent Mobile Number!");
-                textBox1.Clear();
-                mobile.Clear();
+                MessageBox.Show("Please Enter Valid Mobile Number!");
             }
             else
             {
-                for (int i = 0; i < Containers.Employee_list.Count; i++)
+                bool mobilee = false;
+                for (int i = 0; i < Containers.Employee_list.Count(); i++)
                 {
                     if (Containers.Employee_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
                     {
-                        Containers.Employee_list[i].setmobile(mobile.Text);
+                        if (Containers.Employee_list[i].getmobile() == textBox1.Text)
+                            mobilee = true;
                     }
-
                 }
-                if (File.Exists("Employees.xml"))
+                bool mobiles = false;
+                for (int i = 0; i < Containers.Employee_list.Count(); i++)
                 {
-                    File.Delete("Employees.xml");
+                    if (Containers.Employee_list[i].getmobile() == mobile.Text)
+                    {
+                        mobiles = true;
+                    }
                 }
-
-                for (int i = 0; i < Containers.Employee_list.Count; i++)
+                for (int i = 0; i < Containers.Player_list.Count(); i++)
                 {
-                    Containers.write_Employee(Containers.Employee_list[i]);
+                    if (Containers.Player_list[i].getmobile() == mobile.Text)
+                    {
+                        mobiles = true;
+                    }
+                }
+                if (mobiles == true)
+                {
+                    MessageBox.Show("Please Re-enter Mobile Number !");
+                }
+
+               else if (mobilee == false)
+                {
+                    MessageBox.Show("Wrong Mobile Number");
+                }
+                else
+                {
+                    for (int i = 0; i < Containers.Employee_list.Count; i++)
+                    {
+                        if (Containers.Employee_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
+                        {
+                            Containers.Employee_list[i].setmobile(mobile.Text);
+                            
+                            break;
+                        }
+
+                    }
+                    if (File.Exists("Employees.xml"))
+                    {
+                        File.Delete("Employees.xml");
+                    }
+                    
+                    for (int i = 0; i < Containers.Employee_list.Count; i++)
+                    {
+                        Containers.write_Employee(Containers.Employee_list[i]);
+
+                    }
+                  
+                    if (Enter_ID_Employee.coaach == true)
+                    {
+                        for (int i = 0; i < Containers.Coach_list.Count; i++)
+                        {
+                            if (Containers.Coach_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
+                            {
+                                Containers.Coach_list[i].setmobile(mobile.Text);
+
+                                break;
+                            }
+
+                        }
+                        if (File.Exists("Coaches.xml"))
+                        {
+                            File.Delete("Coaches.xml");
+                        }
+
+                        for (int i = 0; i < Containers.Coach_list.Count; i++)
+                        {
+                            Containers.write_coach(Containers.Coach_list[i]);
+                        }
+                    }
+                    MessageBox.Show("Changes Done");
+
 
                 }
-                MessageBox.Show("Changes Done");
-                this.Hide();
             }
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
 
+        private void mobile_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(mobile.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only !");
+                mobile.Text = mobile.Text.Remove(mobile.Text.Length - 1);
+            }
         }
     }
 }

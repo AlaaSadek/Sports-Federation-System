@@ -118,13 +118,19 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-          
-            Options o = new Options();
+
+            mainqueryform o = new mainqueryform();
             o.Show();
             this.Close();
 
         }
-    
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions a = new adminoptions();
+            a.Show();
+            this.Close();
+        }
     }
 }
 

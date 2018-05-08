@@ -26,27 +26,50 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            if (textBox.Text == "")
-            {
-                MessageBox.Show("Please fill the required information");
-            }
-            List<int> working_year = new List<int>();
-            List<string> employment_date = new List<string>();
-            List<string> Status = new List<string>();
-            List<string> department = new List<string>();
+            bool check = false;
             for (int i = 0; i < Containers.Employee_list.Count; i++)
             {
                 if (Containers.Employee_list[i].getId() == textBox.Text)
                 {
-                    working_year.Add(Containers.Employee_list[i].getWorking_Year());
-                    employment_date.Add(Containers.Employee_list[i].getEmployment_date());
-                    Status.Add(Containers.Employee_list[i].GetStatus());
-                    department.Add(Containers.Employee_list[i].GetDepartment());
+                    check = true;
+                    break;
                 }
-                listBox.ItemsSource = working_year;
-                listBox1.ItemsSource = employment_date;
-                listBox2.ItemsSource = Status;
-                listBox3.ItemsSource = department;
+            }
+            if (textBox.Text == "")
+            {
+                MessageBox.Show("Please fill the required information");
+            }
+            else if (check == false)
+            {
+                MessageBox.Show("Wrong ID !");
+            }
+            else
+            {
+                List<int> working_year = new List<int>();
+                List<string> employment_date = new List<string>();
+                List<string> Status = new List<string>();
+                List<string> department = new List<string>();
+                List<string> Name = new List<string>();
+                List<float> bonus = new List<float>();
+
+                for (int i = 0; i < Containers.Employee_list.Count; i++)
+                {
+                    if (Containers.Employee_list[i].getId() == textBox.Text)
+                    {
+                        working_year.Add(Containers.Employee_list[i].getWorking_Year());
+                        employment_date.Add(Containers.Employee_list[i].getEmployment_date());
+                        Status.Add(Containers.Employee_list[i].GetStatus());
+                        department.Add(Containers.Employee_list[i].GetDepartment());
+                        Name.Add(Containers.Employee_list[i].getName());
+                        bonus.Add(Containers.Employee_list[i].getBonus());
+                    }
+                    listBox.ItemsSource = working_year;
+                    listBox1.ItemsSource = employment_date;
+                    listBox2.ItemsSource = Status;
+                    listBox3.ItemsSource = department;
+                    listBox4.ItemsSource = Name;
+                    listBox5.ItemsSource = bonus;
+                }
             }
         }
 
@@ -55,22 +78,29 @@ namespace SFS
 
             if (textBox.Text == "")
             {
+                List<string> Name = new List<string>();
                 List<int> working_year = new List<int>();
                 List<string> employment_date = new List<string>();
                 List<string> Status = new List<string>();
                 List<string> department = new List<string>();
+                List<float> bonus = new List<float>();
                 for (int i = 0; i < Containers.Employee_list.Count; i++)
                 {
-
+                   
+                    Name.Add(Containers.Employee_list[i].getName());
                     working_year.Add(Containers.Employee_list[i].getWorking_Year());
                     employment_date.Add(Containers.Employee_list[i].getEmployment_date());
                     Status.Add(Containers.Employee_list[i].GetStatus());
                     department.Add(Containers.Employee_list[i].GetDepartment());
+                    bonus.Add(Containers.Employee_list[i].getBonus());
                 }
                 listBox.ItemsSource = working_year;
                 listBox1.ItemsSource = employment_date;
                 listBox2.ItemsSource = Status;
                 listBox3.ItemsSource = department;
+                listBox4.ItemsSource = Name;
+                listBox5.ItemsSource = bonus;
+
             }
         }
 
@@ -81,17 +111,32 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            displayOptions m = new displayOptions();
-            m.Show();
-            this.Close();
-        
-    }
+            if (adminoptions.disp == true)
+            {
+                displayOptions z = new displayOptions();
+                z.Show();
+                this.Close();
+            }
+            else
+            {
+                searchoptions so = new searchoptions();
+                so.Show();
+                this.Close();
+            }
+
+
+        }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            Options o = new Options();
+            adminoptions o = new adminoptions();
             o.Show();
             this.Close();
+        }
+
+        private void listBox4_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

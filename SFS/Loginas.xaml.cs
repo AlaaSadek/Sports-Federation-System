@@ -19,9 +19,13 @@ namespace SFS
     /// </summary>
     public partial class Loginas : Window
     {
+        public static string bu="no";
+        public static string au="no";
         public Loginas()
         {
             InitializeComponent();
+            bu = "no";
+            au = "no";
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -34,6 +38,7 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            bu = "yes";
             employeelogin o = new employeelogin();
             o.Show();
             this.Close();
@@ -41,11 +46,16 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            au = "yes";
             employeelogin ep = new employeelogin();
-                ep.Show();
+            ep.Show();
+            this.Close();
+        }
 
-            AccountingOptionForm op = new AccountingOptionForm();
-            op.Show();
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminlogin a = new adminlogin();
+            a.Show();
             this.Close();
         }
     }

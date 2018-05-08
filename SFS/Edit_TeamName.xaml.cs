@@ -42,27 +42,43 @@ namespace SFS
 
             else
             {
-                for (int i = 0; i < Containers.Player_list.Count; i++)
+                bool clubbl = false;
+                for (int i = 0; i < Containers.Club_list.Count; i++)
                 {
-                    if (Containers.Player_list[i].getId().ToString() == Enter_ID.playerid)
+                    if (Teamname.Text == Containers.Club_list[i].getClubName())
                     {
-
-                        Containers.Player_list[i].set_teamname(Teamname.Text);
+                        clubbl = true;
                     }
+
                 }
-                if (File.Exists("Players.xml"))
+                if (clubbl == false)
                 {
-                    File.Delete("Players.xml");
+                    MessageBox.Show("Club doesn't exist ! ");
                 }
-
-                for (int i = 0; i < Containers.Player_list.Count; i++)
+                else
                 {
-                    Containers.write_Player(Containers.Player_list[i]);
+                    for (int i = 0; i < Containers.Player_list.Count; i++)
+                    {
+                        if (Containers.Player_list[i].getId().ToString() == Enter_ID.playerid)
+                        {
+
+                            Containers.Player_list[i].setclubName(Teamname.Text);
+                        }
+                    }
+                    if (File.Exists("Players.xml"))
+                    {
+                        File.Delete("Players.xml");
+                    }
+
+                    for (int i = 0; i < Containers.Player_list.Count; i++)
+                    {
+                        Containers.write_Player(Containers.Player_list[i]);
+
+                    }
+                    MessageBox.Show("Changes Done");
+
 
                 }
-                MessageBox.Show("Changes Done");
-                this.Hide();
-
             }
 
         }
@@ -71,7 +87,13 @@ namespace SFS
         {
             Edit_Player p = new Edit_Player();
             p.Show();
-            this.Hide();
+            this.Close();
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

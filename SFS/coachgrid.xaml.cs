@@ -32,7 +32,7 @@ namespace SFS
           {
               for (int j = i + 1; j < l.Count; j++)
               {
-                  if (l[i].getResult()> l[j].getResult())
+                  if (l[i].getResult()< l[j].getResult())
                   {
                       Coach tmp = l[i];
                      l[i] = l[j];
@@ -57,12 +57,13 @@ List<int> tresult = new List<int>();
           
             listBox.ItemsSource = tname;
                 listBox1.ItemsSource = tresult;
+            textBox.Text = tname[0];
 
         }
     
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Options mq = new Options();
+            mainqueryform mq = new mainqueryform();
             mq.Show();
             this.Close();
         }

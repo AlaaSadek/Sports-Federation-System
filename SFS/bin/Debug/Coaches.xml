@@ -2,34 +2,114 @@
 <Coaches>
   <Coach>
     <Coach_Name>Mai</Coach_Name>
-    <Coach_ID>Ma01</Coach_ID>
-    <Mobile_Number>01000101001010</Mobile_Number>
+    <Coach_ID>15Ma93</Coach_ID>
+    <Mobile_Number>01114198876</Mobile_Number>
     <Gender>Female</Gender>
-    <Medical_Form>Female</Medical_Form>
-    <Salary>22121</Salary>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>4000</Salary>
     <Bonus>0</Bonus>
-    <Employement_Date>3/28/2018</Employement_Date>
-    <Working_Years>0</Working_Years>
-    <Date_of_birth>3/27/2018</Date_of_birth>
+    <Employement_Date>5/1/2017</Employement_Date>
+    <Working_Years>1</Working_Years>
+    <Date_of_birth>5/4/1993</Date_of_birth>
     <Available>Yes</Available>
     <Department>Coach</Department>
-    <Results>418</Results>
-    <Password>123123</Password>
+    <Results>5000</Results>
+    <Password>15Ma93</Password>
   </Coach>
   <Coach>
-    <Coach_Name>Martina</Coach_Name>
-    <Coach_ID>Ma99</Coach_ID>
-    <Mobile_Number>01117332183</Mobile_Number>
+    <Coach_Name>Dina</Coach_Name>
+    <Coach_ID>16Di93</Coach_ID>
+    <Mobile_Number>01114398876</Mobile_Number>
     <Gender>Female</Gender>
-    <Medical_Form>NO</Medical_Form>
-    <Salary>2000</Salary>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>5000</Salary>
     <Bonus>0</Bonus>
-    <Employement_Date>6/7/2016</Employement_Date>
-    <Working_Years>2</Working_Years>
-    <Date_of_birth>8/10/1995</Date_of_birth>
+    <Employement_Date>5/1/2017</Employement_Date>
+    <Working_Years>1</Working_Years>
+    <Date_of_birth>5/4/1993</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>2090</Results>
+    <Password>16Di93</Password>
+  </Coach>
+  <Coach>
+    <Coach_Name>Jana</Coach_Name>
+    <Coach_ID>17Ja93</Coach_ID>
+    <Mobile_Number>01114218876</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>5000</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>5/1/2017</Employement_Date>
+    <Working_Years>1</Working_Years>
+    <Date_of_birth>5/4/1993</Date_of_birth>
     <Available>Yes</Available>
     <Department>Coach</Department>
     <Results>0</Results>
-    <Password>500</Password>
+    <Password>17Ja93</Password>
+  </Coach>
+  <Coach>
+    <Coach_Name>Khalil</Coach_Name>
+    <Coach_ID>19Kh93</Coach_ID>
+    <Mobile_Number>01114219976</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>3000</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>5/1/2017</Employement_Date>
+    <Working_Years>1</Working_Years>
+    <Date_of_birth>5/4/1993</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>0</Results>
+    <Password>19Kh93</Password>
+  </Coach>
+  <Coach>
+    <Coach_Name>Hossam</Coach_Name>
+    <Coach_ID>20Ho80</Coach_ID>
+    <Mobile_Number>01114288976</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>5000</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>2/2/2010</Employement_Date>
+    <Working_Years>8</Working_Years>
+    <Date_of_birth>2/4/1980</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>2300</Results>
+    <Password>20Ho80</Password>
+  </Coach>
+  <Coach>
+    <Coach_Name>Lama</Coach_Name>
+    <Coach_ID>21La80</Coach_ID>
+    <Mobile_Number>01114348976</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>5000</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>2/2/2010</Employement_Date>
+    <Working_Years>8</Working_Years>
+    <Date_of_birth>2/4/1980</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>0</Results>
+    <Password>21La80</Password>
+  </Coach>
+  <Coach>
+    <Coach_Name>Mohamed</Coach_Name>
+    <Coach_ID>22Mo70</Coach_ID>
+    <Mobile_Number>01987654389</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>NO</Medical_Form>
+    <Salary>6000</Salary>
+    <Bonus>0</Bonus>
+    <Employement_Date>1/4/2000</Employement_Date>
+    <Working_Years>18</Working_Years>
+    <Date_of_birth>2/3/1970</Date_of_birth>
+    <Available>Yes</Available>
+    <Department>Coach</Department>
+    <Results>0</Results>
+    <Password>22Mo70</Password>
   </Coach>
 </Coaches>

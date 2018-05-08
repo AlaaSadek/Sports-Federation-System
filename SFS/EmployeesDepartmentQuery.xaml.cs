@@ -27,16 +27,30 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            dep = textBox.Text;
-            EmployeesDepartmentDataG edg = new EmployeesDepartmentDataG();
-            edg.Show();
-            this.Close();
+            if (Department.Text == "")
+            {
+                MessageBox.Show("Choose An Option !");
+            }
+            else
+            {
+                dep = Department.Text;
+                EmployeesDepartmentDataG edg = new EmployeesDepartmentDataG();
+                edg.Show();
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             mainqueryform mq = new mainqueryform();
             mq.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
             this.Close();
         }
     }

@@ -35,6 +35,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.1.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.1.1.2\lib\net45\MaterialDesignColors.dll</HintPath>
       <Private>True</Private>
@@ -45,6 +53,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -63,9 +73,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Accounting.cs" />
     <Compile Include="AccountingOptionForm.xaml.cs">
       <DependentUpon>AccountingOptionForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="AccountingoptionNotification.xaml.cs">
+      <DependentUpon>AccountingoptionNotification.xaml</DependentUpon>
     </Compile>
     <Compile Include="Add Expense.xaml.cs">
       <DependentUpon>Add Expense.xaml</DependentUpon>
@@ -91,6 +103,16 @@
     <Compile Include="Add__Team.xaml.cs">
       <DependentUpon>Add__Team.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Admin.cs" />
+    <Compile Include="adminlogin.xaml.cs">
+      <DependentUpon>adminlogin.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminoptionNotification.xaml.cs">
+      <DependentUpon>adminoptionNotification.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="adminoptions.xaml.cs">
+      <DependentUpon>adminoptions.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AGE.xaml.cs">
       <DependentUpon>AGE.xaml</DependentUpon>
     </Compile>
@@ -98,14 +120,21 @@
       <DependentUpon>Bsponsor.xaml</DependentUpon>
     </Compile>
     <Compile Include="Championships.cs" />
-    <Compile Include="Championships_players.cs" />
-    <Compile Include="Championships_team_.cs" />
+    <Compile Include="ChampionshipTeamsDatagrid.xaml.cs">
+      <DependentUpon>ChampionshipTeamsDatagrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ChartDemo.xaml.cs">
+      <DependentUpon>ChartDemo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Club.cs" />
     <Compile Include="Coach.cs" />
     <Compile Include="coachgrid.xaml.cs">
       <DependentUpon>coachgrid.xaml</DependentUpon>
     </Compile>
     <Compile Include="Containers.cs" />
+    <Compile Include="departmentstat.xaml.cs">
+      <DependentUpon>departmentstat.xaml</DependentUpon>
+    </Compile>
     <Compile Include="displayOptions.xaml.cs">
       <DependentUpon>displayOptions.xaml</DependentUpon>
     </Compile>
@@ -124,14 +153,20 @@
     <Compile Include="Display_Sponsers.xaml.cs">
       <DependentUpon>Display_Sponsers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Dsiplay_Accounting.xaml.cs">
-      <DependentUpon>Dsiplay_Accounting.xaml</DependentUpon>
+    <Compile Include="display_team.xaml.cs">
+      <DependentUpon>display_team.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DoughnutChartExample.xaml.cs">
+      <DependentUpon>DoughnutChartExample.xaml</DependentUpon>
     </Compile>
     <Compile Include="Edit_Avaliable.xaml.cs">
       <DependentUpon>Edit_Avaliable.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Edit_Delete.xaml.cs">
-      <DependentUpon>Edit_Delete.xaml</DependentUpon>
+    <Compile Include="Edit_Bonus.xaml.cs">
+      <DependentUpon>Edit_Bonus.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Department.xaml.cs">
+      <DependentUpon>Edit_Department.xaml</DependentUpon>
     </Compile>
     <Compile Include="Edit_DepartmentSalaryBonus.xaml.cs">
       <DependentUpon>Edit_DepartmentSalaryBonus.xaml</DependentUpon>
@@ -147,6 +182,9 @@
     </Compile>
     <Compile Include="Edit_MobileNumberEmployee.xaml.cs">
       <DependentUpon>Edit_MobileNumberEmployee.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Edit_Optionss.xaml.cs">
+      <DependentUpon>Edit_Optionss.xaml</DependentUpon>
     </Compile>
     <Compile Include="Edit_Player.xaml.cs">
       <DependentUpon>Edit_Player.xaml</DependentUpon>
@@ -172,6 +210,9 @@
     <Compile Include="EmployeesDepartmentQuery.xaml.cs">
       <DependentUpon>EmployeesDepartmentQuery.xaml</DependentUpon>
     </Compile>
+    <Compile Include="employees_age.xaml.cs">
+      <DependentUpon>employees_age.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EmploymentdurationQuery.xaml.cs">
       <DependentUpon>EmploymentdurationQuery.xaml</DependentUpon>
     </Compile>
@@ -191,7 +232,6 @@
     <Compile Include="mainqueryform.xaml.cs">
       <DependentUpon>mainqueryform.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Managers.cs" />
     <Compile Include="Options.xaml.cs">
       <DependentUpon>Options.xaml</DependentUpon>
     </Compile>
@@ -199,6 +239,9 @@
       <DependentUpon>placech.xaml</DependentUpon>
     </Compile>
     <Compile Include="Player.cs" />
+    <Compile Include="PlayersChart.xaml.cs">
+      <DependentUpon>PlayersChart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="playersfiltration.xaml.cs">
       <DependentUpon>playersfiltration.xaml</DependentUpon>
     </Compile>
@@ -211,12 +254,13 @@
     <Compile Include="QueryChampionShips%28RESULTS%29.xaml.cs">
       <DependentUpon>QueryChampionShips%28RESULTS%29.xaml</DependentUpon>
     </Compile>
+    <Compile Include="reschart.xaml.cs">
+      <DependentUpon>reschart.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SalaryQuery.xaml.cs">
       <DependentUpon>SalaryQuery.xaml</DependentUpon>
     </Compile>
-    <Compile Include="SalaryQueryDataGrid.xaml.cs">
-      <DependentUpon>SalaryQueryDataGrid.xaml</DependentUpon>
-    </Compile>
+    <Compile Include="SalaryQueryDataGrid.xaml.cs" />
     <Compile Include="searchbyname.xaml.cs">
       <DependentUpon>searchbyname.xaml</DependentUpon>
     </Compile>
@@ -242,6 +286,9 @@
       <DependentUpon>Search_Sponser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sponsers.cs" />
+    <Compile Include="statistics.xaml.cs">
+      <DependentUpon>statistics.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Team.cs" />
     <Compile Include="TeamChampionShipsQuery.xaml.cs">
       <DependentUpon>TeamChampionShipsQuery.xaml</DependentUpon>
@@ -252,9 +299,16 @@
     <Compile Include="typech.xaml.cs">
       <DependentUpon>typech.xaml</DependentUpon>
     </Compile>
+    <Compile Include="yearlyincome_statement.xaml.cs">
+      <DependentUpon>yearlyincome_statement.xaml</DependentUpon>
+    </Compile>
     <Page Include="AccountingOptionForm.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="AccountingoptionNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Add Expense.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -288,6 +342,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="adminlogin.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminoptionNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="adminoptions.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AGE.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -296,9 +362,21 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ChampionshipTeamsDatagrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ChartDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="coachgrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="departmentstat.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="displayOptions.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -324,7 +402,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Dsiplay_Accounting.xaml">
+    <Page Include="display_team.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="DoughnutChartExample.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -332,9 +414,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Edit_Delete.xaml">
+    <Page Include="Edit_Bonus.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Edit_Department.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Edit_DepartmentSalaryBonus.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -353,6 +439,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Edit_MobileNumberEmployee.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Edit_Optionss.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -387,6 +477,10 @@
     <Page Include="EmployeesDepartmentQuery.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="employees_age.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EmploymentdurationQuery.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -433,6 +527,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PlayersChart.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="playersfiltration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -448,6 +546,10 @@
     <Page Include="QueryChampionShips%28RESULTS%29.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="reschart.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SalaryQuery.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -489,6 +591,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="statistics.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="TeamChampionShipsQuery.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -500,6 +606,10 @@
     <Page Include="typech.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="yearlyincome_statement.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -532,6 +642,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+    <None Include="Thumbs.db" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -611,6 +722,15 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="wrongg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="notification.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="notification1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

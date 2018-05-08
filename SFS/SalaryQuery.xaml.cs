@@ -19,6 +19,8 @@ namespace SFS
     /// </summary>
     public partial class SalaryQuery : Window
     {
+        public static float value = 0;
+        public static string query = "";
         public SalaryQuery()
         {
             InitializeComponent();
@@ -26,50 +28,18 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            List<Employee> filtered = new List<Employee>();
-            for(int i=0; i<Containers.Employee_list.Count();i++)
+            if (SalaryComparasionValue.Text == "" || comboBox.Text == "")
             {
-                   if(comboBox.Text== "Less Than or Equal")
-                          {
-                             if(Containers.Employee_list[i].getSalary()<=int.Parse(SalaryComparasionValue.Text))
-                                 {
-                        filtered.Add(Containers.Employee_list[i]);
-                                  }
-                          }
-                   else if(comboBox.Text== "Greater Than or equal")
-                {
-                    if (Containers.Employee_list[i].getSalary() >= int.Parse(SalaryComparasionValue.Text))
-                    {
-                        filtered.Add(Containers.Employee_list[i]);
-                    }
-                }
-                   else if(comboBox.Text== "Greater than")
-                {
-                    if (Containers.Employee_list[i].getSalary() > int.Parse(SalaryComparasionValue.Text))
-                    {
-                        filtered.Add(Containers.Employee_list[i]);
-                    }
-                }
-                   else if(comboBox.Text== "Less than")
-                {
-                    if (Containers.Employee_list[i].getSalary() < int.Parse(SalaryComparasionValue.Text))
-                    {
-                        filtered.Add(Containers.Employee_list[i]);
-                    }
-                }
-                   else if(comboBox.Text== "Equal")
-                {
-                    if (Containers.Employee_list[i].getSalary() == int.Parse(SalaryComparasionValue.Text))
-                    {
-                        filtered.Add(Containers.Employee_list[i]);
-                    }
-                }
-
+                MessageBox.Show("Please Enter Valid Data !");
             }
-            
-            SalaryQueryDataGrid sd = new SalaryQueryDataGrid();
-            sd.Show();
-            this.Close();
+            else
+            {
+                value = float.Parse(SalaryComparasionValue.Text);
+                query = comboBox.Text;
+                SalaryQueryDataGrid sd = new SalaryQueryDataGrid();
+                sd.Show();
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -78,5 +48,31 @@ namespace SFS
             mq.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
+
+        private void SalaryComparasionValue_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(SalaryComparasionValue.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only !");
+                SalaryComparasionValue.Text = SalaryComparasionValue.Text.Remove(SalaryComparasionValue.Text.Length - 1);
+            }
+        }
+
+        private void SalaryComparasionValue_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(SalaryComparasionValue.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only !");
+                SalaryComparasionValue.Text = SalaryComparasionValue.Text.Remove(SalaryComparasionValue.Text.Length - 1);
+            }
+        }
     }
 }
+

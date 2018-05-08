@@ -60,7 +60,22 @@ namespace SFS
             {
                 Containers.Read_Sponsor();
             }
-
+            if (File.Exists("Admins.xml"))
+            {
+                Containers.Read_Admin();
+            }
+            if (File.Exists("Expenses.xml"))
+            {
+                Expense.read_expense();
+            }
+            if (File.Exists("Counter1.xml"))
+            {
+                Containers.Read_count1();
+            }
+            if (File.Exists("Counter2.xml"))
+            {
+                Containers.Read_count2();
+            }
         }
 
         private void button_Click(object sender, RoutedEventArgs e)

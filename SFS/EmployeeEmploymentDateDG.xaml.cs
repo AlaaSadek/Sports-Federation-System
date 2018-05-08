@@ -47,9 +47,22 @@ namespace SFS
                     filtered_salary.Add(Containers.Employee_list[i].getSalary());
                 }
             }
-            listBox.ItemsSource = filtered;
-            listBox1.ItemsSource = filtered_dep;
-            listBox2.ItemsSource = filtered_salary;
+            if (filtered.Count() == 0)
+            {
+                MessageBox.Show("No Employees With Such Working Years");
+            }
+            else
+            {
+                listBox.ItemsSource = filtered;
+                listBox1.ItemsSource = filtered_dep;
+                listBox2.ItemsSource = filtered_salary;
+            }
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

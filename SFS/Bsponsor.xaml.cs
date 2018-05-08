@@ -19,6 +19,7 @@ namespace SFS
     /// </summary>
     public partial class Bsponsor : Window
     {
+        public static int best_sponsor = 0;
         public Bsponsor()
         {
             InitializeComponent();
@@ -27,7 +28,6 @@ namespace SFS
         private void button_Click(object sender, RoutedEventArgs e)
         {
             
-
             List<Sponsers> x =Containers.Sponsor_list;
             for (int i = 0; i < x.Count; i++)
             {
@@ -59,6 +59,7 @@ namespace SFS
             listBox1.ItemsSource = tprice;
             listBox2.ItemsSource = tindex;
             textBox.Text = tName[0];
+            best_sponsor = tprice[0];
 
         }
 

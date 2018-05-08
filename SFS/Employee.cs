@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -13,8 +13,8 @@ namespace SFS
         string status;
         string department;
         string password;
-
-
+        string salarynotification;
+        string departmentnotification;
         public Employee()
         {
             working_year = 0;
@@ -22,9 +22,10 @@ namespace SFS
             status = "Available";
             department = "";
             password = "";
-            
+            salarynotification = "NO";
+            departmentnotification = "YES";
         }
-        public Employee(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob,int workyear,string empdate, string statue, string dep,string pass) :base(namee,date,genderr,ID,medical,sal,bon,mob)
+        public Employee(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob,int workyear,string empdate, string statue, string dep,string pass,string snotification,string dnotification) :base(namee,date,genderr,ID,medical,sal,bon,mob)
         {
             
             Employment_date = empdate;
@@ -32,6 +33,8 @@ namespace SFS
             department = dep;
             working_year = workyear;
             password = pass;
+            salarynotification = snotification;
+            departmentnotification = dnotification;
         }
         public void setWorking_Year(int working_year)
         {
@@ -78,13 +81,51 @@ namespace SFS
         {
             return this.password;
         }
-        
-        public int Working_year_calc()
+        public void setsalarynot(string sal)
         {
-            int current_year = 2018;
-            int years;
-            years= current_year - working_year;
-            return years;
+            this.salarynotification = sal;
+        }
+        public string getsalarynot()
+        {
+            return this.salarynotification;
+        }
+        public void setdepnot(string dep)
+        {
+            this.departmentnotification = dep;
+        }
+        public string getdepnot()
+        {
+            return this.departmentnotification;
+        }
+        public static int Working_year_calc(DateTime d)
+        {
+            
+              DateTime doe = Convert.ToDateTime(d);
+              var today = DateTime.Today;
+              var wk = today.Year - doe.Year;
+              return int.Parse(wk.ToString());
+        }
+         public static Employee operator +(Employee b, Employee c)
+        {
+          Employee emp = b;
+          emp.setWorking_Year(b.getWorking_Year() + c.getWorking_Year());
+          return emp;
+        }
+        public static bool operator ==(Employee b, Employee c)
+        {
+          return (b.getWorking_Year() == c.getWorking_Year());
+        }
+        public static bool operator !=(Employee b, Employee c)
+        {
+          return (b.getWorking_Year() != c.getWorking_Year());
+        }
+        public static bool operator >(Employee b, Employee c)
+        {
+          return (b.getWorking_Year() > c.getWorking_Year());
+        }
+        public static bool operator <(Employee b, Employee c)
+        {
+          return (b.getWorking_Year() < c.getWorking_Year());
         }
  
     }

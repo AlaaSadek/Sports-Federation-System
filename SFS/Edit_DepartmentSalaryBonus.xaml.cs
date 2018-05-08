@@ -24,6 +24,7 @@ namespace SFS
     /// </summary>
     public partial class Edit_DepartmentSalaryBonus : Window
     {
+        public static bool sal = false;
         public Edit_DepartmentSalaryBonus()
         {
             InitializeComponent();
@@ -36,19 +37,23 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            if (Department.Text == "" || salary.Text == "")
+           
+            if (salary.Text == "")
+            {
                 MessageBox.Show("Please fill the required information !");
+            }
             else
             {
                 for (int i = 0; i < Containers.Employee_list.Count; i++)
                 {
                     if (Containers.Employee_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
                     {
-                        Containers.Employee_list[i].setDepartment(Department.Text);
                         Containers.Employee_list[i].setSalary(float.Parse(salary.Text));
+                        Containers.Employee_list[i].setsalarynot("YES");
                     }
 
                 }
+
                 if (File.Exists("Employees.xml"))
                 {
                     File.Delete("Employees.xml");
@@ -59,20 +64,50 @@ namespace SFS
                     Containers.write_Employee(Containers.Employee_list[i]);
 
                 }
+                if (Enter_ID_Employee.coaach == true)
+                {
+                    for (int i = 0; i < Containers.Coach_list.Count; i++)
+                    {
+                        if (Containers.Coach_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
+                        {
+                            Containers.Coach_list[i].setSalary(float.Parse(salary.Text));
+                            
+                        }
+
+                    }
+                    if (File.Exists("Coaches.xml"))
+                    {
+                        File.Delete("Coaches.xml");
+                    }
+
+                    for (int i = 0; i < Containers.Coach_list.Count; i++)
+                    {
+                        Containers.write_coach(Containers.Coach_list[i]);
+
+                    }
+                }
                 MessageBox.Show("Changes Done");
-                this.Hide();
             }
+        }
 
 
 
-            }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
-            this.Hide();
+           // this.Hide();
             Edit_Employee ee = new Edit_Employee();
             ee.Show();
+            this.Close();
 
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

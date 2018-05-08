@@ -26,7 +26,12 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if (comboBox.Text == "Employees")
+            if (comboBox.Text == "")
+            {
+                MessageBox.Show("Choose An Option !");
+            }
+
+           else if (comboBox.Text == "Employees")
             {
                 Display_Employee dp = new Display_Employee();
                 dp.Show();
@@ -61,12 +66,25 @@ namespace SFS
                 TeamPlayers tp = new TeamPlayers();
                 tp.Show();
                 this.Close();
-            }   
+            }
+            else if (comboBox.Text == "Teams")
+            {
+                display_team a = new display_team();
+                a.Show();
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Options o = new Options();
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
             o.Show();
             this.Close();
         }

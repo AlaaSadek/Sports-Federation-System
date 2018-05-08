@@ -20,15 +20,36 @@ namespace SFS
         public static List<Team> Team_list = new List<Team>();
         public static List<Championships> championship_list = new List<Championships>();
         public static List<Coach> Coach_list = new List<Coach>();
-        public static List<Championships_players> Players_results = new List<Championships_players>();
-
+        public static List<Admin> Admin_list = new List<Admin>();
+        public static List<Championships> Players_results = new List<Championships>();
+    
+        
+        public static void Read_Admin()
+        {
+            Containers.Admin_list.Clear();
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Admins.xml");
+            XmlNodeList list = doc.GetElementsByTagName("Admin");
+            FileStream w = new FileStream("Admins.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string Name = list_2[0].Name;
+                string nvalue = list_2[0].InnerText;
+                string Password = list_2[1].Name;
+                string pvalue = list_2[1].InnerText;
+               
+                Admin Ad = new Admin(nvalue, pvalue);
+                Admin_list.Add(Ad);
+            }
+            w.Close();
+        }
         public static void Read_Players()
         {
             Containers.Player_list.Clear();
             XmlDocument doc = new XmlDocument();
             doc.Load("Players.xml");
             XmlNodeList list = doc.GetElementsByTagName("Player");
-            BinaryFormatter f = new BinaryFormatter();
             FileStream w = new FileStream("Players.xml", FileMode.Open);
             for (int i = 0; i < list.Count; i++)
             {
@@ -53,7 +74,9 @@ namespace SFS
                 string tval = list_2[8].InnerText;
                 string coach_name = list_2[9].Name;
                 string ccval = list_2[9].InnerText;
-                Player p = new Player(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, tval,ccval);
+                string club_name = list_2[10].Name;
+                string clcval = list_2[10].InnerText;
+                Player p = new Player(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, tval,ccval,clcval);
                 Player_list.Add(p);
             }
             w.Close();
@@ -84,7 +107,6 @@ namespace SFS
             XmlDocument doc = new XmlDocument();
             doc.Load("Employees.xml");
             XmlNodeList list = doc.GetElementsByTagName("Employee");
-            BinaryFormatter f = new BinaryFormatter();
             FileStream w = new FileStream("Employees.xml", FileMode.Open);
             for (int i = 0; i < list.Count; i++)
             {
@@ -115,7 +137,11 @@ namespace SFS
                 string depval = list_2[11].InnerText;
                 string password = list_2[12].Name;
                 string pasval = list_2[12].InnerText;
-                Employee p = new Employee(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, int.Parse(wval), edval, aval, depval, pasval);
+                string salarynot = list_2[13].Name;
+                string salnotval = list_2[13].InnerText;
+                string departmentnot = list_2[14].Name;
+                string depnotval = list_2[14].InnerText;
+                Employee p = new Employee(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, int.Parse(wval), edval, aval, depval, pasval, salnotval,depnotval);
                 Employee_list.Add(p);
             }
             w.Close();
@@ -158,7 +184,7 @@ namespace SFS
                 string resval = list_2[12].InnerText;
                 string password = list_2[13].Name;
                 string pasval = list_2[13].InnerText;
-                Coach p = new Coach(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, int.Parse(wval), edval, aval, depval,0,"",int.Parse(resval),pasval);
+                Coach p = new Coach(nvalue, dval, gval, ivalue, medvalue, float.Parse(sval), float.Parse(bval), mvalue, int.Parse(wval), edval, aval, depval,0,"",int.Parse(resval),pasval,"NO","NO");
                 Coach_list.Add(p);
             }
             w.Close();
@@ -169,7 +195,6 @@ namespace SFS
             XmlDocument doc = new XmlDocument();
             doc.Load("Clubs.xml");
             XmlNodeList list = doc.GetElementsByTagName("Club");
-            BinaryFormatter f = new BinaryFormatter();
             FileStream w = new FileStream("Clubs.xml", FileMode.Open);
             for (int i = 0; i < list.Count; i++)
             {
@@ -178,12 +203,6 @@ namespace SFS
                 string nvalue = list_2[0].InnerText;
                 string starting_date = list_2[1].Name;
                 string sdvalue = list_2[1].InnerText;
-                string Club_teams = list_2[1].Name;
-                string ctvalue = list_2[1].InnerText;
-                string club_championships = list_2[2].Name;
-                string ccval = list_2[2].InnerText;
-                string Club_sponsors = list_2[3].Name;
-                string csvalue = list_2[3].InnerText;
                 Club c = new Club(nvalue, sdvalue);
                 Club_list.Add(c);
             }
@@ -218,20 +237,56 @@ namespace SFS
             XmlDocument doc = new XmlDocument();
             doc.Load("Teams.xml");
             XmlNodeList list = doc.GetElementsByTagName("Team");
-            BinaryFormatter f = new BinaryFormatter();
             FileStream w = new FileStream("Teams.xml", FileMode.Open);
             for (int i = 0; i < list.Count; i++)
             {
                 XmlNodeList list_2 = list[i].ChildNodes;
                 string Name = list_2[0].Name;
                 string nvalue = list_2[0].InnerText;
-                string senior = list_2[1].Name;
-                string svalue = list_2[1].InnerText;
-                string numberofresults = list_2[1].Name;
-                string nrvalue = list_2[1].InnerText;
+                string club = list_2[1].Name;
+                string cvalue = list_2[1].InnerText;
+                string coach = list_2[2].Name;
+                string covalue = list_2[2].InnerText;
+                string senior = list_2[3].Name;
+                string svalue = list_2[3].InnerText;
+                
 
-                Team t = new Team(nvalue, svalue);
+                Team t = new Team(nvalue, svalue,cvalue,covalue);
                 Team_list.Add(t);
+            }
+            w.Close();
+        }
+        public static void Read_count1()
+        {
+            
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Counter1.xml");
+            XmlNodeList list = doc.GetElementsByTagName("ID");
+            FileStream w = new FileStream("Counter1.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string id = list_2[0].Name;
+                string ivalue = list_2[0].InnerText;
+
+                Person.count1 =int.Parse( ivalue);
+            }
+            w.Close();
+        }
+        public static void Read_count2()
+        {
+
+            XmlDocument doc = new XmlDocument();
+            doc.Load("Counter2.xml");
+            XmlNodeList list = doc.GetElementsByTagName("ID");
+            FileStream w = new FileStream("Counter2.xml", FileMode.Open);
+            for (int i = 0; i < list.Count; i++)
+            {
+                XmlNodeList list_2 = list[i].ChildNodes;
+                string id = list_2[0].Name;
+                string ivalue = list_2[0].InnerText;
+
+                Person.count2 = int.Parse(ivalue);
             }
             w.Close();
         }
@@ -260,7 +315,7 @@ namespace SFS
                 string name = list_2[4].Name;
                 string naval = list_2[4].InnerText;
 
-
+                
                 for (int l=0;l< Player_list.Count;l++)
                 {
                     if(Player_list[l].getId()==ivalue)
@@ -270,9 +325,127 @@ namespace SFS
                         Player_list[l].set_results(Player_list[l].get_results() +int.Parse( reval));
                     }
                 }
+
+                for(int l = 0;l<Player_list.Count;l++)
+                {
+                    bool done = false;
+                    if (Player_list[l].getId() == ivalue)
+                    {
+                        for(int z =0;z<Club_list.Count;z++)
+                        {
+                            if(Player_list[l].getClubName()==Club_list[z].getClubName())
+                            {
+                                for(int m =0;m< Club_list[z].champList.Count; m++)
+                                {
+                                    if (Club_list[z].champList[m].getName()==naval)
+                                    {
+                                        Club_list[z].champList[m].Setresults(Club_list[z].champList[m].Getresults() + int.Parse(reval));
+                                        done = true;
+                                        break;
+                                    }                      
+                                }
+                                if(!done)
+                                {
+                                    Championships c = new Championships(cpvalue, ctvalue, int.Parse(reval), naval);
+                                    Club_list[z].champList.Add(c);
+                                }     
+                            }
+                        }
+                    }
+                }
+
+                for(int k=0;k<championship_list.Count;k++)
+                {
+                    if(championship_list[k].getName()==naval)
+                    {
+                        championship_list[k].Settotalresults(championship_list[k].Gettotalresults()+ int.Parse(reval)  );
+                        break;
+                    }
+                }
+                for (int l = 0; l < Player_list.Count; l++)
+                {
+                    if (Player_list[l].getId() == ivalue)
+                    {
+                        for (int k = 0; k < Team_list.Count; k++)
+                        {
+
+                            if (Team_list[k].getTeam()== Player_list[l].get_teamname() )
+                            {
+                                for (int a = 0; a < Club_list.Count; a++)
+                                {
+                                    if(Club_list[a].getClubName() == Player_list[l].getClubName())
+                                    {
+                                        Team_list[k].Settotalresults(Team_list[k].Gettotalresults() + int.Parse(reval));
+                                        Club_list[a].Settotalresults(Club_list[a].Gettotalresults() + int.Parse(reval));
+                                    }
+                                } 
+                            }
+                        }
+                        
+                    }
+                }
+
             }
             w.Close();
 
+        }
+        public static void write_counter1()
+        {
+            if (File.Exists("Counter1.xml"))
+            {
+                File.Delete("Counter1.xml");
+            }
+
+            if (!File.Exists("Counter1.xml"))
+            {
+                XmlTextWriter document = new XmlTextWriter("Counter1.xml", Encoding.UTF8);
+
+                document.Formatting = Formatting.Indented;
+                document.WriteStartDocument();
+                document.WriteStartElement("IDs");
+                document.WriteStartElement("ID");
+
+                document.WriteStartElement("Counter");
+                document.WriteString(Person.count1.ToString());
+                document.WriteEndElement();
+
+                document.WriteEndElement();
+                document.WriteEndElement();
+                document.WriteEndDocument();
+
+                document.Close();
+
+
+            }
+        }
+        public static void write_counter2()
+        {
+            if (File.Exists("Counter2.xml"))
+            {
+                File.Delete("Counter2.xml");
+            }
+
+            if (!File.Exists("Counter2.xml"))
+            {
+                XmlTextWriter document = new XmlTextWriter("Counter2.xml", Encoding.UTF8);
+
+                document.Formatting = Formatting.Indented;
+                document.WriteStartDocument();
+                document.WriteStartElement("IDs");
+                document.WriteStartElement("ID");
+
+                document.WriteStartElement("Counter");
+                document.WriteString(Person.count1.ToString());
+                document.WriteEndElement();
+
+                document.WriteEndElement();
+                document.WriteEndElement();
+                document.WriteEndDocument();
+
+                document.Close();
+
+
+            }
         }
         public static void write_Player(Player p)
         {
@@ -323,6 +496,10 @@ namespace SFS
 
                 document.WriteStartElement("Coach_Name");
                 document.WriteString(p.get_CoachName());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Club_Name");
+                document.WriteString(p.getClubName());
                 document.WriteEndElement();
 
                 document.WriteEndElement();
@@ -380,6 +557,10 @@ namespace SFS
                 XmlNode cooo = doc.CreateElement("Coach_Name");
                 cooo.InnerText = p.get_CoachName();
                 playerr.AppendChild(cooo);
+
+                XmlNode clubb = doc.CreateElement("Club_Name");
+                clubb.InnerText = p.getClubName();
+                playerr.AppendChild(clubb);
 
                 doc.DocumentElement.AppendChild(playerr);
                 doc.Save("Players.xml");
@@ -449,6 +630,14 @@ namespace SFS
                 document.WriteString(e.Getpassword());
                 document.WriteEndElement();
 
+                document.WriteStartElement("Salary_Notification");
+                document.WriteString(e.getsalarynot());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Department_Notification");
+                document.WriteString(e.getdepnot());
+                document.WriteEndElement();
+
                 document.WriteEndElement();
                 document.WriteEndElement();
                 document.WriteEndDocument();
@@ -516,6 +705,14 @@ namespace SFS
                 pas.InnerText = e.Getpassword();
                 employee.AppendChild(pas);
 
+                XmlNode snot = doc.CreateElement("Salary_Notification");
+                snot.InnerText = e.getsalarynot();
+                employee.AppendChild(snot);
+
+                XmlNode dnot = doc.CreateElement("Department_Notification");
+                dnot.InnerText = e.getdepnot();
+                employee.AppendChild(dnot);
+
                 doc.DocumentElement.AppendChild(employee);
                 doc.Save("Employees.xml");
 
@@ -549,7 +746,7 @@ namespace SFS
                 document.WriteEndElement();
 
                 document.WriteStartElement("Medical_Form");
-                document.WriteString(e.getGender());
+                document.WriteString(e.getMedicalReport());
                 document.WriteEndElement();
 
                 document.WriteStartElement("Salary");
@@ -661,7 +858,7 @@ namespace SFS
                 employee.AppendChild(pas);
 
                 doc.DocumentElement.AppendChild(employee);
-                doc.Save("Coach.xml");
+                doc.Save("Coaches.xml");
 
             }
         }
@@ -728,5 +925,73 @@ namespace SFS
 
             }
         }
+        public static void write_Team(Team t)
+        {
+            if (!File.Exists("Teams.xml"))
+            {
+                XmlTextWriter document = new XmlTextWriter("Teams.xml", Encoding.UTF8);
+
+                document.Formatting = Formatting.Indented;
+                document.WriteStartDocument();
+                document.WriteStartElement("Teams");
+                document.WriteStartElement("Team");
+
+                document.WriteStartElement("Team_Name");
+                document.WriteString(t.getTeam());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Club_Name");
+                document.WriteString(t.getClubName());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Coach_Name");
+                document.WriteString(t.getcoachname());
+                document.WriteEndElement();
+
+                document.WriteStartElement("Senior");
+                document.WriteString(t.getage());
+                document.WriteEndElement();
+
+
+
+                document.WriteEndElement();
+                document.WriteEndElement();
+                document.WriteEndDocument();
+
+                document.Close();
+
+
+            }
+            else
+
+            {
+                XmlDocument doc = new XmlDocument();
+                doc.Load("Teams.xml");
+
+                XmlNode resultt = doc.CreateElement("Team");
+
+                XmlNode name = doc.CreateElement("Team_Name");
+                name.InnerText = t.getTeam();
+                resultt.AppendChild(name);
+
+                XmlNode club = doc.CreateElement("Club_Name");
+                club.InnerText = t.getcoachname();
+                resultt.AppendChild(club);
+
+                XmlNode coach = doc.CreateElement("Coach_Name");
+                coach.InnerText = (t.getClubName());
+                resultt.AppendChild(coach);
+
+                XmlNode sen = doc.CreateElement("Senior");
+                sen.InnerText = (t.getage());
+                resultt.AppendChild(sen);
+
+                doc.DocumentElement.AppendChild(resultt);
+                doc.Save("Teams.xml");
+
+
+            }
+        }
+
     }
 }

@@ -29,18 +29,21 @@ namespace SFS
         {
             Add_Options ao = new Add_Options();
             ao.Show();
+            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Edit_Delete ed = new Edit_Delete();
+            Enter_ID ed = new Enter_ID();
             ed.Show();
+            this.Close();
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
         {
-            Edit_Delete ed = new Edit_Delete();
+            Enter_ID ed = new Enter_ID();
             ed.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
@@ -73,6 +76,13 @@ namespace SFS
         {
             searchoptions os = new searchoptions();
             os.Show();
+            this.Close();
+        }
+
+        private void button7_Click(object sender, RoutedEventArgs e)
+        {
+            Loginas lgn = new Loginas();
+            lgn.Show();
             this.Close();
         }
     }

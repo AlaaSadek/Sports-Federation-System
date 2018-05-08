@@ -34,6 +34,10 @@ namespace SFS
             month = m;
             taken_for = t;
         }
+        public void set_expval(int value)
+        {
+            expense_value = value;
+        }
         public int get_value()
         {
             return expense_value;
@@ -105,7 +109,6 @@ namespace SFS
             XmlDocument doc = new XmlDocument();
             doc.Load("Expenses.xml");
             XmlNodeList list = doc.GetElementsByTagName("Expense");
-            BinaryFormatter f = new BinaryFormatter();
             FileStream w = new FileStream("Expenses.xml", FileMode.Open);
             for (int i = 0; i < list.Count; i++)
             {
@@ -122,5 +125,28 @@ namespace SFS
             
         }
     }
+        public static Expense operator +(Expense b, Expense c)
+        {
+            Expense emp = b;
+            emp.set_expval(b.get_value() + c.get_value());
+            return emp;
+        }
+        public static bool operator ==(Expense b, Expense c)
+        {
+            return (b.get_value() == c.get_value());
+        }
+        public static bool operator !=(Expense b, Expense c)
+        {
+            return (b.get_value() != c.get_value());
+        }
+        public static bool operator >(Expense b, Expense c)
+        {
+            return (b.get_value() > c.get_value());
+        }
+        public static bool operator <(Expense b, Expense c)
+        {
+            return (b.get_value() < c.get_value());
+        }
     }
+
 }

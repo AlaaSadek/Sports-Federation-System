@@ -13,13 +13,15 @@ namespace SFS
         string type;
         string senior;
         int results;
+        int totalresult;
+            
         public Championships()
         {
             Name = "";
             place = "";
             type = "";
             results = 0;
-           
+            totalresult = 0;
         }
         public Championships(string placee,string Type,string sn,string name)
         {
@@ -27,7 +29,7 @@ namespace SFS
             place = placee;
             type = Type;
             senior = sn;
-            
+            totalresult = 0;
         }
         public Championships(string type, string place, int result, string name)
         {
@@ -35,6 +37,7 @@ namespace SFS
             this.place = place;
             this.results = result;
             this.Name = name;
+            totalresult = 0;
         }
         public void setPlace(string place)
         {
@@ -52,7 +55,7 @@ namespace SFS
         {
             return this.Name;
         }
-        
+    
         public string GetPlace()
         {
             return this.place;
@@ -80,5 +83,37 @@ namespace SFS
         {
             return this.senior;
         }
+        public int Gettotalresults()
+        {
+            return this.totalresult;
+        }
+        public void Settotalresults(int result)
+        {
+            this.totalresult =result ;
+        }
+
+        public static Championships operator +(Championships b, Championships c)
+        {
+            Championships championship = b;
+            championship.Settotalresults(b.Gettotalresults() + c.Gettotalresults());
+            return championship;
+        }
+        public static bool operator ==(Championships b, Championships c)
+        {
+            return (b.Gettotalresults() == c.Gettotalresults());
+        }
+        public static bool operator !=(Championships b, Championships c)
+        {
+            return (b.Gettotalresults() != c.Gettotalresults());
+        }
+        public static bool operator >(Championships b, Championships c)
+        {
+            return (b.Gettotalresults() > c.Gettotalresults());
+        }
+        public static bool operator <(Championships b, Championships c)
+        {
+            return (b.Gettotalresults() < c.Gettotalresults());
+        }
+
     }
 }

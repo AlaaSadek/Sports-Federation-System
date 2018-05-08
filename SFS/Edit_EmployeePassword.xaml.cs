@@ -25,6 +25,7 @@ namespace SFS
     /// </summary>
     public partial class Edit_EmployeePassword : Window
     {
+        static public bool ggg = false;
         public Edit_EmployeePassword()
         {
             InitializeComponent();
@@ -32,47 +33,131 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Edit_Employee s = new Edit_Employee();
-            s.Show();
+            if (Loginas.bu == "yes")
+            {
+                if (employeelogin.Notification == true|| employeelogin.depnoti == true || employeelogin.salnoti == true)
+                {
+                    ggg = true;
+                    adminoptionNotification s = new adminoptionNotification();
+                    s.Show();
+                    this.Close();
+                }
+                else
+                {
+                    ggg = true;
+                    adminoptions s = new adminoptions();
+                    s.Show();
+                    this.Close();
+                }
+            }
+            else
+            {
+                if (employeelogin.Notification == true|| employeelogin.depnoti == true || employeelogin.salnoti == true)
+                {
+                    AccountingoptionNotification aa = new AccountingoptionNotification();
+                    aa.Show();
+                    this.Close();
+                }
+                else
+                {
+                    AccountingOptionForm aa = new AccountingOptionForm();
+                    aa.Show();
+                    this.Close();
+                }
+
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            
             bool found = false;
             if (textBox.Text == "" || password.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
-            for (int i = 0; i < Containers.Employee_list.Count; i++)
+          else if (password.Text.Length < 6)
             {
-                if (Containers.Employee_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
-                {
-                    if (Containers.Employee_list[i].Getpassword() == password.Text)
-                        found = true;
-                    Containers.Employee_list[i].setpassword(password.Text);
-                }
+                MessageBox.Show("Password Is Too Short !");
 
             }
-            if (found == false)
+            else if(textBox.Text== password.Text)
             {
-                MessageBox.Show("Wrong Password ");
+                MessageBox.Show("Enter Diffrent Password ");
             }
             else
             {
-                if (File.Exists("Employees.xml"))
-                {
-                    File.Delete("Employees.xml");
-                }
-
                 for (int i = 0; i < Containers.Employee_list.Count; i++)
                 {
-                    Containers.write_Employee(Containers.Employee_list[i]);
+                    if (Containers.Employee_list[i].getId().ToString() == employeelogin.loginid)
+                    {
+                        if (Containers.Employee_list[i].Getpassword() == textBox.Text)
+                        {
+                            found = true;
+                            Containers.Employee_list[i].setpassword(password.Text);
+                        }
+                    }
 
                 }
-                MessageBox.Show("Changes Done");
-                this.Hide();
-            }
+                
+                if (found == false)
+                {
+                    MessageBox.Show("Wrong Password ");
+                }
+                else
+                {
+                    if (File.Exists("Employees.xml"))
+                    {
+                        File.Delete("Employees.xml");
+                    }
 
+                    for (int i = 0; i < Containers.Employee_list.Count; i++)
+                    {
+                        Containers.write_Employee(Containers.Employee_list[i]);
+
+                    }
+                    MessageBox.Show("Changes Done");
+                    if (Loginas.bu == "yes")
+                    {
+                        if (employeelogin.Notification == true || employeelogin.depnoti == true||employeelogin.salnoti==true)
+                        {
+                            ggg = true;
+                            adminoptionNotification s = new adminoptionNotification();
+                            s.Show();
+                            this.Close();
+                        }
+                        else { 
+                        ggg = true;
+                        adminoptions s = new adminoptions();
+                        s.Show();
+                        this.Close();
+                    }
+                    }
+                    else
+                    {
+                        if (employeelogin.Notification == true || employeelogin.depnoti == true || employeelogin.salnoti == true)
+                        {
+                            AccountingoptionNotification aa = new AccountingoptionNotification();
+                            aa.Show();
+                            this.Close();
+                        }
+                        else
+                        {
+                            AccountingOptionForm aa = new AccountingOptionForm();
+                            aa.Show();
+                            this.Close();
+                        }
+                        
+                    }
+                }
+
+            }
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
     

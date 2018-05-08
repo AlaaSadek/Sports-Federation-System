@@ -1,87 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Players>
   <Player>
-    <Player_Name>salma</Player_Name>
-    <Player_ID>sa01</Player_ID>
-    <Mobile_Number>01067890090</Mobile_Number>
+    <Player_Name>Yasmin</Player_Name>
+    <Player_ID>1Ya98</Player_ID>
+    <Mobile_Number>01234566542</Mobile_Number>
     <Gender>Female</Gender>
     <Medical_Form>YES</Medical_Form>
-    <Salary>3000</Salary>
-    <Bonus>0</Bonus>
-    <Date_of_birth>4/15/2018</Date_of_birth>
-    <Team_Name>Shams</Team_Name>
-    <Coach_Name>mr.hawhaw</Coach_Name>
-  </Player>
-  <Player>
-    <Player_Name>omar</Player_Name>
-    <Player_ID>om98</Player_ID>
-    <Mobile_Number>01149929226</Mobile_Number>
-    <Gender>Male</Gender>
-    <Medical_Form>YES</Medical_Form>
-    <Salary>0</Salary>
-    <Bonus>0</Bonus>
-    <Date_oF_birth>1/7/1998</Date_oF_birth>
-    <Team_Name>haha</Team_Name>
-    <Coach_Name>ha</Coach_Name>
-  </Player>
-  <Player>
-    <Player_Name>Lara</Player_Name>
-    <Player_ID>La10</Player_ID>
-    <Mobile_Number>01028</Mobile_Number>
-    <Gender>Female</Gender>
-    <Medical_Form>YES</Medical_Form>
-    <Salary>0</Salary>
-    <Bonus>0</Bonus>
-    <Date_oF_birth>2/2/2010</Date_oF_birth>
-    <Team_Name>Heliopolis</Team_Name>
+    <Salary>2000</Salary>
+    <Bonus>1000</Bonus>
+    <Date_of_birth>2/22/1998</Date_of_birth>
+    <Team_Name>Women</Team_Name>
     <Coach_Name>Mai</Coach_Name>
+    <Club_Name>Heliopolis</Club_Name>
   </Player>
   <Player>
-    <Player_Name>Nour</Player_Name>
-    <Player_ID>No99</Player_ID>
-    <Mobile_Number>012839103721</Mobile_Number>
+    <Player_Name>Fatma</Player_Name>
+    <Player_ID>11Fa00</Player_ID>
+    <Mobile_Number>01237887676</Mobile_Number>
     <Gender>Female</Gender>
     <Medical_Form>YES</Medical_Form>
-    <Salary>0</Salary>
-    <Bonus>0</Bonus>
-    <Date_oF_birth>6/21/1990</Date_oF_birth>
-    <Team_Name>Petro Sport</Team_Name>
-    <Coach_Name>Mai</Coach_Name>
+    <Salary>2000</Salary>
+    <Bonus>1000</Bonus>
+    <Date_oF_birth>2/1/2000</Date_oF_birth>
+    <Team_Name>Women</Team_Name>
+    <Coach_Name>Dina</Coach_Name>
+    <Club_Name>Al Ahly</Club_Name>
   </Player>
   <Player>
-    <Player_Name>Khaled</Player_Name>
-    <Player_ID>Kh20</Player_ID>
-    <Mobile_Number>01173029123</Mobile_Number>
+    <Player_Name>Yehia</Player_Name>
+    <Player_ID>24Ye00</Player_ID>
+    <Mobile_Number>01087445443</Mobile_Number>
     <Gender>Male</Gender>
     <Medical_Form>NO</Medical_Form>
-    <Salary>0</Salary>
-    <Bonus>0</Bonus>
-    <Date_oF_birth>10/27/2004</Date_oF_birth>
-    <Team_Name>Heliopolis</Team_Name>
-    <Coach_Name>Mai</Coach_Name>
+    <Salary>2000</Salary>
+    <Bonus>1000</Bonus>
+    <Date_oF_birth>2/2/2000</Date_oF_birth>
+    <Team_Name>Men</Team_Name>
+    <Coach_Name>Hossam</Coach_Name>
+    <Club_Name>Al Shams</Club_Name>
   </Player>
   <Player>
-    <Player_Name>Salwa</Player_Name>
-    <Player_ID>Sa99</Player_ID>
-    <Mobile_Number>01116381923</Mobile_Number>
-    <Gender>Female</Gender>
+    <Player_Name>Salah</Player_Name>
+    <Player_ID>3Sa98</Player_ID>
+    <Mobile_Number>01234566534</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>2000</Salary>
+    <Bonus>1000</Bonus>
+    <Date_oF_birth>2/22/1998</Date_oF_birth>
+    <Team_Name>Men</Team_Name>
+    <Coach_Name>Mai</Coach_Name>
+    <Club_Name>Heliopolis</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Mazen</Player_Name>
+    <Player_ID>27Ma00</Player_ID>
+    <Mobile_Number>01087433443</Mobile_Number>
+    <Gender>Male</Gender>
     <Medical_Form>NO</Medical_Form>
-    <Salary>0</Salary>
-    <Bonus>0</Bonus>
-    <Date_oF_birth>5/22/1995</Date_oF_birth>
-    <Team_Name>Heliolido</Team_Name>
-    <Coach_Name>Mai</Coach_Name>
+    <Salary>2000</Salary>
+    <Bonus>1000</Bonus>
+    <Date_oF_birth>2/2/2000</Date_oF_birth>
+    <Team_Name>Men</Team_Name>
+    <Coach_Name>Hossam</Coach_Name>
+    <Club_Name>Smoha</Club_Name>
   </Player>
   <Player>
-    <Player_Name>Maria</Player_Name>
-    <Player_ID>Ma02</Player_ID>
-    <Mobile_Number>01132710362</Mobile_Number>
+    <Player_Name>Dalia</Player_Name>
+    <Player_ID>9Da00</Player_ID>
+    <Mobile_Number>01237887685</Mobile_Number>
     <Gender>Female</Gender>
     <Medical_Form>YES</Medical_Form>
     <Salary>2000</Salary>
     <Bonus>0</Bonus>
-    <Date_oF_birth>8/9/2002</Date_oF_birth>
-    <Team_Name>nasr city</Team_Name>
+    <Date_oF_birth>2/1/2000</Date_oF_birth>
+    <Team_Name>Women</Team_Name>
+    <Coach_Name>Dina</Coach_Name>
+    <Club_Name>Al Ahly</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Youmna</Player_Name>
+    <Player_ID>22Yo00</Player_ID>
+    <Mobile_Number>01087665437</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>2000</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>2/2/2000</Date_oF_birth>
+    <Team_Name>Women</Team_Name>
+    <Coach_Name>Hossam</Coach_Name>
+    <Club_Name>Al Shams</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Hania</Player_Name>
+    <Player_ID>23Ha00</Player_ID>
+    <Mobile_Number>01087445437</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>2000</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>2/2/2000</Date_oF_birth>
+    <Team_Name>Women</Team_Name>
+    <Coach_Name>Hossam</Coach_Name>
+    <Club_Name>Al Shams</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Yasin</Player_Name>
+    <Player_ID>5Ya02</Player_ID>
+    <Mobile_Number>01234577534</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>2/5/2002</Date_oF_birth>
+    <Team_Name>Boys16</Team_Name>
+    <Coach_Name>Khalil</Coach_Name>
+    <Club_Name>Heliopolis</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Rana</Player_Name>
+    <Player_ID>8Ra02</Player_ID>
+    <Mobile_Number>01456577534</Mobile_Number>
+    <Gender>Female</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>0</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>2/5/2002</Date_oF_birth>
+    <Team_Name>Girls16</Team_Name>
+    <Coach_Name>Khalil</Coach_Name>
+    <Club_Name>Heliopolis</Club_Name>
+  </Player>
+  <Player>
+    <Player_Name>Asser</Player_Name>
+    <Player_ID>31As99</Player_ID>
+    <Mobile_Number>01112341567</Mobile_Number>
+    <Gender>Male</Gender>
+    <Medical_Form>YES</Medical_Form>
+    <Salary>2000</Salary>
+    <Bonus>0</Bonus>
+    <Date_oF_birth>8/18/1999</Date_oF_birth>
+    <Team_Name>Men</Team_Name>
     <Coach_Name>Mai</Coach_Name>
+    <Club_Name>Al Shams</Club_Name>
   </Player>
 </Players>

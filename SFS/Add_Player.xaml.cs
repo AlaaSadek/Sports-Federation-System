@@ -28,164 +28,239 @@ namespace SFS
         {
             InitializeComponent();
         }
-
+       
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            string gender;
-            string med;
-            int x= 0;
-            string bou=x.ToString();
-            int y = int.Parse(Date.Text.Substring(6));
-            int z = 18 - y;
-            string salaryy = "0";
-            if (z > 13)
-            {
-                int s = 2000;
-                 salaryy = s.ToString();
-            }
 
-            /* string temp = Date.Text;
-             string id = temp[8].ToString() + temp[9].ToString();*/
-            if (male.IsChecked == true)
-                gender = "Male";
-            else gender = "Female";
-            if (yes.IsChecked == true)
-                med = "YES";
-            else med = "NO";
-            string temp = Date.Text;
-            string temp2 = player_name.Text;
-            string id = temp2[0].ToString() + temp2[1].ToString() + temp[6].ToString() + temp[7].ToString();
-            bool mobile = false;
-            for (int i = 0; i < Containers.Player_list.Count(); i++)
-            {
-                if (Containers.Player_list[i].getmobile() == Number.Text)
-                    mobile = true;
-            }
-                if (player_name.Text == "" || Number.Text == "" ||  team_name.Text == "" || Date.Text == "" )
+            if (player_name.Text == "" || Number.Text == "" || names.Text == "" || Date.Text == "" || club.Text == "")
             {
                 MessageBox.Show("Please fill the required information !");
             }
-           else if ((male.IsChecked == true) && (female.IsChecked == true))
+            else if (Number.Text.Length != 11)
+            {
+                MessageBox.Show("Please Enter Valid Mobile Number!");
+            }
+            else if ((male.IsChecked == true) && (female.IsChecked == true))
                 MessageBox.Show("Please fill the required information !");
             else if ((yes.IsChecked == true) && (no.IsChecked == true))
                 MessageBox.Show("Please fill the required information !");
-             else if (mobile == true)
+
+
+            else
             {
-                MessageBox.Show("This mobile number is already registered !");
-            }
 
-           // Player newplayer = new Player(team_name.Text,Name.Text,Date.Text,gender,id,med,);
+                string gender;
+                string med;
+                int x = 0;
+                string bou = x.ToString();
+                int y = int.Parse(Date.Text.Substring(6));
+
+                string salaryy = "0";
+                if (names.Text == "Women" || names.Text == "Men")
+                {
+                    salaryy = "2000";
+                }
+
+                if (male.IsChecked == true)
+                    gender = "Male";
+                else gender = "Female";
+                if (yes.IsChecked == true)
+                    med = "YES";
+                else med = "NO";
+                string temp = Date.Text;
+                string temp2 = player_name.Text;
+                string id = "";
+                bool mobile = false;
+                Person.count2++;
 
 
-           else if (!File.Exists("Players.xml"))
-            {
-                XmlTextWriter document = new XmlTextWriter("Players.xml", Encoding.UTF8);
+                if (temp.Length == 10)
+                {
+                    id = Person.count2 + temp2[0].ToString() + temp2[1].ToString() + temp[8].ToString() + temp[9].ToString();
+                }
+                else if (temp.Length == 9)
+                {
+                    id = Person.count2 + temp2[0].ToString() + temp2[1].ToString() + temp[7].ToString() + temp[8].ToString();
+                }
+                else if (temp.Length == 8)
+                {
+                    id = Person.count2 + temp2[0].ToString() + temp2[1].ToString() + temp[6].ToString() + temp[7].ToString();
+                }
 
-                document.Formatting = Formatting.Indented;
-                document.WriteStartDocument();
-                document.WriteStartElement("Players");
-                document.WriteStartElement("Player");
 
-                document.WriteStartElement("Player_Name");
-                document.WriteString(player_name.Text);
-                document.WriteEndElement();
 
-                document.WriteStartElement("Player_ID");
-                document.WriteString(id);
-                document.WriteEndElement(); 
+                Player p = new Player(player_name.Text, Date.Text, gender, id, med, float.Parse(salaryy), x, Number.Text, names.Text, coach.Text, club.Text);
 
-                document.WriteStartElement("Mobile_Number");
-                document.WriteString(Number.Text);
-                document.WriteEndElement();
+                bool mobilee = false;
+                for (int i = 0; i < Containers.Player_list.Count(); i++)
+                {
+                    if (Containers.Player_list[i].getmobile() == Number.Text)
+                    {
+                        mobilee = true;
+                    }
+                }
+                for (int i = 0; i < Containers.Employee_list.Count(); i++)
+                {
+                    if (Containers.Employee_list[i].getmobile() == Number.Text)
+                    {
+                        mobilee = true;
+                    }
+                }
+                bool coachh = false, clubbl = false;
+                for (int i = 0; i < Containers.Club_list.Count; i++)
+                {
+                    if (club.Text == Containers.Club_list[i].getClubName())
+                    {
+                        clubbl = true;
+                    }
 
-                document.WriteStartElement("Gender");
-                document.WriteString(gender);
-                document.WriteEndElement();
+                }
 
-                document.WriteStartElement("Medical_Form");
-                document.WriteString(med);
-                document.WriteEndElement();
+                for (int i = 0; i < Containers.Coach_list.Count; i++)
+                {
+                    if (coach.Text == Containers.Coach_list[i].getName())
+                    {
+                        coachh = true;
+                    }
 
-                document.WriteStartElement("Salary");
-                document.WriteString(salaryy);
-                document.WriteEndElement();
+                }
+                if (mobilee == true)
+                {
+                    MessageBox.Show("Please Re-enter Mobile Number !");
+                }
+                else if(coachh==false)
+                {
+                    MessageBox.Show("Coach doesn't exist ! ");
+                }   
+                else if (clubbl == false)
+                {
+                    MessageBox.Show("Club Does not Exists !");
+                }
+                else
+                {
 
-                document.WriteStartElement("Bonus");
-                document.WriteString(bou);
-                document.WriteEndElement();
+                    Containers.Player_list.Add(p);
+                    if (!File.Exists("Players.xml"))
+                    {
 
-                document.WriteStartElement("Date_of_birth");
-                document.WriteString(Date.Text);
-                document.WriteEndElement();
+                        XmlTextWriter document = new XmlTextWriter("Players.xml", Encoding.UTF8);
 
-                document.WriteStartElement("Team_Name");
-                document.WriteString(team_name.Text);
-                document.WriteEndElement();
+                        document.Formatting = Formatting.Indented;
+                        document.WriteStartDocument();
+                        document.WriteStartElement("Players");
+                        document.WriteStartElement("Player");
 
-                document.WriteStartElement("Coach_Name");
-                document.WriteString(coach.Text);
-                document.WriteEndElement();
+                        document.WriteStartElement("Player_Name");
+                        document.WriteString(player_name.Text);
+                        document.WriteEndElement();
 
-                document.WriteEndElement();
-                document.WriteEndElement();
-                document.WriteEndDocument();
+                        document.WriteStartElement("Player_ID");
+                        document.WriteString(id);
+                        document.WriteEndElement();
 
-                document.Close();
+                        document.WriteStartElement("Mobile_Number");
+                        document.WriteString(Number.Text);
+                        document.WriteEndElement();
 
-                MessageBox.Show("Player Successfuly Added.");
-            }
-           else
+                        document.WriteStartElement("Gender");
+                        document.WriteString(gender);
+                        document.WriteEndElement();
 
-            {
-                XmlDocument doc = new XmlDocument();
-                doc.Load("Players.xml");
-                
-                XmlNode playerr = doc.CreateElement("Player");
+                        document.WriteStartElement("Medical_Form");
+                        document.WriteString(med);
+                        document.WriteEndElement();
 
-                XmlNode Player_Name = doc.CreateElement("Player_Name");
-                Player_Name.InnerText = player_name.Text;
-                playerr.AppendChild(Player_Name);
+                        document.WriteStartElement("Salary");
+                        document.WriteString(salaryy);
+                        document.WriteEndElement();
 
-                XmlNode ID = doc.CreateElement("Player_ID");
-                ID.InnerText = id;
-                playerr.AppendChild(ID);
+                        document.WriteStartElement("Bonus");
+                        document.WriteString(bou);
+                        document.WriteEndElement();
 
-                XmlNode MobileNum = doc.CreateElement("Mobile_Number");
-                MobileNum.InnerText = Number.Text;
-                playerr.AppendChild(MobileNum);
-                
-                XmlNode Genderr = doc.CreateElement("Gender");
-                Genderr.InnerText = gender;
-                playerr.AppendChild(Genderr);
+                        document.WriteStartElement("Date_of_birth");
+                        document.WriteString(Date.Text);
+                        document.WriteEndElement();
 
-                XmlNode Medical = doc.CreateElement("Medical_Form");
-                Medical.InnerText = med;
-                playerr.AppendChild(Medical);
+                        document.WriteStartElement("Team_Name");
+                        document.WriteString(names.Text);
+                        document.WriteEndElement();
 
-                XmlNode salary = doc.CreateElement("Salary");
-                salary.InnerText = salaryy;
-                playerr.AppendChild(salary);
+                        document.WriteStartElement("Coach_Name");
+                        document.WriteString(coach.Text);
+                        document.WriteEndElement();
 
-                XmlNode bonus = doc.CreateElement("Bonus");
-                bonus.InnerText = bou;
-                playerr.AppendChild(bonus);
+                        document.WriteStartElement("Club_Name");
+                        document.WriteString(club.Text);
+                        document.WriteEndElement();
 
-                XmlNode dateofbirth = doc.CreateElement("Date_oF_birth");
-                dateofbirth.InnerText = Date.Text;
-                playerr.AppendChild(dateofbirth);
+                        document.WriteEndElement();
+                        document.WriteEndElement();
+                        document.WriteEndDocument();
 
-                XmlNode teamm = doc.CreateElement("Team_Name");
-                teamm.InnerText = team_name.Text;
-                playerr.AppendChild(teamm);
+                        document.Close();
 
-                XmlNode cooo = doc.CreateElement("Coach_Name");
-                cooo.InnerText = coach.Text;
-                playerr.AppendChild(cooo);
+                        MessageBox.Show("Player Successfuly Added.");
+                    }
+                    else
 
-                doc.DocumentElement.AppendChild(playerr);
-                doc.Save("Players.xml");
+                    {
+                        XmlDocument doc = new XmlDocument();
+                        doc.Load("Players.xml");
 
-                MessageBox.Show("Player Successfuly Added.");
+                        XmlNode playerr = doc.CreateElement("Player");
+
+                        XmlNode Player_Name = doc.CreateElement("Player_Name");
+                        Player_Name.InnerText = player_name.Text;
+                        playerr.AppendChild(Player_Name);
+
+                        XmlNode ID = doc.CreateElement("Player_ID");
+                        ID.InnerText = id;
+                        playerr.AppendChild(ID);
+
+                        XmlNode MobileNum = doc.CreateElement("Mobile_Number");
+                        MobileNum.InnerText = Number.Text;
+                        playerr.AppendChild(MobileNum);
+
+                        XmlNode Genderr = doc.CreateElement("Gender");
+                        Genderr.InnerText = gender;
+                        playerr.AppendChild(Genderr);
+
+                        XmlNode Medical = doc.CreateElement("Medical_Form");
+                        Medical.InnerText = med;
+                        playerr.AppendChild(Medical);
+
+                        XmlNode salary = doc.CreateElement("Salary");
+                        salary.InnerText = salaryy;
+                        playerr.AppendChild(salary);
+
+                        XmlNode bonus = doc.CreateElement("Bonus");
+                        bonus.InnerText = bou;
+                        playerr.AppendChild(bonus);
+
+                        XmlNode dateofbirth = doc.CreateElement("Date_oF_birth");
+                        dateofbirth.InnerText = Date.Text;
+                        playerr.AppendChild(dateofbirth);
+
+                        XmlNode teamm = doc.CreateElement("Team_Name");
+                        teamm.InnerText = names.Text;
+                        playerr.AppendChild(teamm);
+
+                        XmlNode cooo = doc.CreateElement("Coach_Name");
+                        cooo.InnerText = coach.Text;
+                        playerr.AppendChild(cooo);
+
+                        XmlNode clubb = doc.CreateElement("Club_Name");
+                        clubb.InnerText = club.Text;
+                        playerr.AppendChild(clubb);
+
+                        doc.DocumentElement.AppendChild(playerr);
+                        doc.Save("Players.xml");
+
+                        MessageBox.Show("Player Successfuly Added.");
+                    }
+                    Containers.write_counter2();
+                }
             }
         }
 
@@ -193,7 +268,7 @@ namespace SFS
         {
             Add_Options cccc = new Add_Options();
             cccc.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void yes_Checked(object sender, RoutedEventArgs e)
@@ -203,9 +278,23 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Options o = new Options();
+            adminoptions o = new adminoptions();
             o.Show();
             this.Close();
+        }
+
+        private void Number_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(Number.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only !");
+                Number.Text = Number.Text.Remove(Number.Text.Length - 1);
+            }
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
     }

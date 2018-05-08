@@ -19,6 +19,7 @@ namespace SFS
     /// </summary>
     public partial class PlayersInEachTeamQuery : Window
     {
+        public static string team_name = "";
         public PlayersInEachTeamQuery()
         {
             InitializeComponent();
@@ -26,24 +27,45 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            List<Player> filtered = new List<Player>();
-            for(int i=0;i<Containers.Player_list.Count();i++)
+            if (names.Text == "")
             {
-                if(Containers.Player_list[i].get_teamname()==textBox.Text)
-                {
-                    filtered.Add(Containers.Player_list[i]);
-                }
+                MessageBox.Show("Please Enter valid Team Name ");
             }
-            PlayersInEachTeamDG d = new PlayersInEachTeamDG();
-            d.Show();
-            this.Close();
-
+            else
+            {
+                team_name = names.Text;
+                List<Player> filtered = new List<Player>();
+                for (int i = 0; i < Containers.Player_list.Count(); i++)
+                {
+                    if (Containers.Player_list[i].get_teamname() == names.Text)
+                    {
+                        filtered.Add(Containers.Player_list[i]);
+                    }
+                }
+                PlayersInEachTeamDG d = new PlayersInEachTeamDG();
+                d.Show();
+                this.Close();
+            }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             mainqueryform mq = new mainqueryform();
             mq.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions ap = new adminoptions();
+            ap.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions ap = new adminoptions();
+            ap.Show();
             this.Close();
         }
     }

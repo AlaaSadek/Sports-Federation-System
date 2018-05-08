@@ -5,35 +5,47 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SFS"
         mc:Ignorable="d"
-        Title="Add_Championship" Height="350" Width="500
-        ">
+        Title="Add_Championship" Height="550" Width="600">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="backgrd.png"/>
+            <ImageBrush ImageSource="new.png"/>
         </Grid.Background>
-        <TextBox x:Name="place" HorizontalAlignment="Left" Height="27" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="284,167,0,0"/>
-        <RadioButton x:Name="Senior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="211,218,0,0"/>
-        <RadioButton x:Name="junior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="343,218,0,0" RenderTransformOrigin="2.812,2.396"/>
-        <Button x:Name="add" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Height="47" Margin="401,264,0,0" Click="add_Click" BorderThickness="0">
+        <ComboBox x:Name="place" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Margin="333,256,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="32" FontWeight="Bold">
+            <ComboBoxItem Content="Cairo" FontWeight="Bold"/>
+            <ComboBoxItem Content="Alex" FontWeight="Bold"/>
+            <ComboBoxItem Content="Giza" FontWeight="Bold"/>
+            <ComboBoxItem Content="Menya" FontWeight="Bold"/>
+        </ComboBox>
+        <RadioButton x:Name="Senior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="241,329,0,0"/>
+        <RadioButton x:Name="junior" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="407,329,0,0" RenderTransformOrigin="2.812,2.396"/>
+        <Button x:Name="add" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Height="64" Margin="477,447,0,0" Click="add_Click" BorderThickness="0">
             <Button.Background>
                 <ImageBrush ImageSource="Add.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="back" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Height="47" BorderThickness="0" Click="back_Click" Margin="9,264,0,0">
+        <Button x:Name="back" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="73" Height="64" BorderThickness="0" Click="back_Click" Margin="35,447,0,0">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="label2" Content="Type of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="35,123,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy" Content="Place of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,165,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy1" Content="Stage:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="37,201,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy2" Content="Senior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="231,205,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy3" Content="Junior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="364,205,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <Label x:Name="label2_Copy4" Content="Championship Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="38,84,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
-        <TextBox x:Name="name" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="150" Margin="284,86,0,0"/>
-        <ComboBox x:Name="type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="285,129,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="25" FontWeight="Bold">
+        <Label x:Name="label2" Content="Type of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,193,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy" Content="Place of Championship:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,253,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy1" Content="Stage:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="39,315,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy2" Content="Senior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="285,318,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy3" Content="Junior" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="450,318,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <Label x:Name="label2_Copy4" Content="Championship Name:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="42,134,0,0" FontFamily="Traditional Arabic" FontSize="22" FontWeight="Bold"/>
+        <TextBox x:Name="name" HorizontalAlignment="Left" Height="28" TextWrapping="Wrap" VerticalAlignment="Top" Width="168" Margin="334,139,0,0"/>
+        <ComboBox x:Name="type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="168" Margin="335,199,0,0" FontSize="18" FontFamily="Traditional Arabic" Height="32" FontWeight="Bold">
             <ComboBoxItem Content="OFFICIAL" FontWeight="Bold"/>
             <ComboBoxItem Content="NON-OFFICIAL" FontWeight="Bold"/>
         </ComboBox>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="39" Height="32" Margin="16,10,0,0" Click="button_Click">
+            <Button.BorderBrush>
+                <ImageBrush/>
+            </Button.BorderBrush>
+            <Button.Background>
+                <ImageBrush ImageSource="wrongg.png"/>
+            </Button.Background>
+        </Button>
     </Grid>
 </Window>

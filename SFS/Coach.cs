@@ -13,7 +13,7 @@ namespace SFS
         {
             result = 0;
         }
-        public Coach(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob, int workyear, string empdate, string statue, string dep, int Expenses, string accountant,int result, string pass) : base(namee, date, genderr, ID, medical, sal, bon, mob, workyear, empdate, statue, dep,pass)
+        public Coach(string namee, string date, string genderr, string ID, string medical, float sal, float bon, string mob, int workyear, string empdate, string statue, string dep, int Expenses, string accountant,int result, string pass,string salnot,string depnot) : base(namee, date, genderr, ID, medical, sal, bon, mob, workyear, empdate, statue, dep,pass,salnot,depnot)
         {
             this.result = result;
         }

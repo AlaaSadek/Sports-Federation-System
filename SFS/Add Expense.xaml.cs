@@ -33,9 +33,32 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            Expense ex = new Expense(int.Parse(textBox.Text), expense_month.Text, textBlock.Text);
-            ex.write_expense();
-            MessageBox.Show("Expense Successfully Added !");
+            if (textBox.Text == "" || expense_month.Text == "" || textBox1.Text == "")
+            {
+                MessageBox.Show("Please fill the required information !");
+            }
+            else
+            {
+                Expense ex = new Expense(int.Parse(textBox.Text), expense_month.Text, textBox1.Text);
+                ex.write_expense();
+                MessageBox.Show("Expense Successfully Added !");
+            }
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            AccountingOptionForm aa = new AccountingOptionForm();
+            aa.Show();
+            this.Close();
+        }
+
+        private void textBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(textBox.Text, "[^0-9]"))
+            {
+                MessageBox.Show("Please enter numbers only !");
+                textBox.Text = textBox.Text.Remove(textBox.Text.Length - 1);
+            }
         }
     }
 }

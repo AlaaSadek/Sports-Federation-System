@@ -5,28 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SFS"
         mc:Ignorable="d"
-        Title="displayOptions" Height="350" Width="500">
+        Title="displayOptions" Height="550" Width="600">
     <Window.Background>
         <ImageBrush ImageSource="backgrd.png"/>
     </Window.Background>
     <Grid>
-        <Label x:Name="label" Content="Display :" HorizontalAlignment="Left" Height="51" Margin="29,35,0,0" VerticalAlignment="Top" Width="194" FontSize="36" FontFamily="Traditional Arabic" Foreground="#FF12808B"/>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="47" Margin="133,110,0,0" VerticalAlignment="Top" Width="205">
+        <Label x:Name="label" Content="Display :" HorizontalAlignment="Left" Height="51" Margin="18,184,0,0" VerticalAlignment="Top" Width="194" FontSize="36" FontFamily="Traditional Arabic" Foreground="#FF12808B"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Height="32" Margin="237,203,0,0" VerticalAlignment="Top" Width="205" FontSize="13" FontFamily="Traditional Arabic">
             <ComboBoxItem>Employees</ComboBoxItem>
             <ComboBoxItem>ChampionShip</ComboBoxItem>
             <ComboBoxItem>Coaches</ComboBoxItem>
             <ComboBoxItem>Club</ComboBoxItem>
             <ComboBoxItem>Sponsors</ComboBoxItem>
             <ComboBoxItem>Players</ComboBoxItem>
+            <ComboBoxItem>Teams</ComboBoxItem>
         </ComboBox>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="69" Margin="398,240,0,0" VerticalAlignment="Top" Width="84" BorderThickness="0" Click="button_Click">
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="86" Margin="439,391,0,0" VerticalAlignment="Top" Width="96" BorderThickness="0" Click="button_Click" RenderTransformOrigin="0.245,0.452">
             <Button.Background>
                 <ImageBrush ImageSource="view.png"/>
             </Button.Background>
         </Button>
-        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Height="69" Margin="10,240,0,0" VerticalAlignment="Top" Width="79" BorderThickness="0" Click="button1_Click">
+        <Button x:Name="button1" Content="" HorizontalAlignment="Left" Height="86" Margin="34,391,0,0" VerticalAlignment="Top" Width="93" BorderThickness="0" Click="button1_Click">
             <Button.Background>
                 <ImageBrush ImageSource="back.png"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="button2" Content="" HorizontalAlignment="Left" BorderThickness="0" VerticalAlignment="Top" Width="30" Height="Auto" Margin="4,2,0,0" Click="button2_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="wrongg.png"/>
             </Button.Background>
         </Button>
     </Grid>

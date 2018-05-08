@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SFS"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="550">
+        Title="MainWindow" Height="550" Width="600">
     <Grid>
         <Grid.Background>
-            <ImageBrush ImageSource="sports.png"/>
+            <ImageBrush ImageSource="sfs.png"/>
         </Grid.Background>
-        <Button x:Name="button" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="119" Margin="212,319,0,0" Height="52" Click="button_Click_1" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="button" BorderThickness="0" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Width="99" Margin="252,403,0,0" Height="77" Click="button_Click_1" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

@@ -26,10 +26,49 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            displayOptions m = new displayOptions();
-            m.Show();
-            this.Close();
-    }
+            bool check = false;
+            for (int i = 0; i < Containers.championship_list.Count; i++)
+            {
+                if (Containers.championship_list[i].getName() == textBox.Text)
+                {
+                    check = true;
+                    break;
+                }
+            }
+            if (textBox.Text == "")
+            {
+                MessageBox.Show("Please fill required information !");
+            }
+            else if (check == false)
+            {
+                MessageBox.Show("No ChampionShips Available In This Place  !");
+            }
+            else
+            {
+                List<string> name = new List<string>();
+                List<string> place = new List<string>();
+                List<string> type = new List<string>();
+                List<string> senior = new List<string>();
+
+                for (int i = 0; i < Containers.championship_list.Count; i++)
+                {
+                   
+                     if (Containers.championship_list[i].getName() == textBox.Text)
+                    {
+                        name.Add(Containers.championship_list[i].getName());
+                        place.Add(Containers.championship_list[i].GetPlace());
+                        type.Add(Containers.championship_list[i].Gettype());
+                        senior.Add(Containers.championship_list[i].getSenior());
+                    }
+
+
+                }
+                listBox.ItemsSource = name;
+                listBox1.ItemsSource = type;
+                listBox2.ItemsSource = place;
+                listBox3.ItemsSource = senior;
+            }
+        }
         private void button2_Click(object sender, RoutedEventArgs e)
         {
         if (textBox.Text == "")
@@ -38,20 +77,17 @@ namespace SFS
             List<string> place = new List<string>();
             List<string> type = new List<string>();
             List<string> senior = new List<string>();
-            List<int> results = new List<int>();
             for (int i = 0; i < Containers.championship_list.Count; i++)
             {
                 name.Add(Containers.championship_list[i].getName());
                 place.Add(Containers.championship_list[i].GetPlace());
                 type.Add(Containers.championship_list[i].Gettype());
                 senior.Add(Containers.championship_list[i].getSenior());
-                results.Add(Containers.championship_list[i].Getresults());
             }
             listBox.ItemsSource = name;
             listBox1.ItemsSource = type;
             listBox2.ItemsSource = place;
             listBox3.ItemsSource = senior;
-            listBox4.ItemsSource = results;
 
         }
         }
@@ -72,10 +108,35 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            displayOptions z = new displayOptions();
-            z.Show();
+            if(adminoptions.disp==true|| adminoptionNotification.disp==true)
+            {
+           displayOptions z = new displayOptions();
+                z.Show();
             this.Close();
+            }
+           else if(adminoptions.search==true|| adminoptionNotification.search == true)
+            {
+                searchoptions so = new searchoptions();
+                so.Show();
+                this.Close();
+            }
 
+           
+
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
+
+        private void button3_Click_1(object sender, RoutedEventArgs e)
+        {
+            adminoptions a = new adminoptions();
+            a.Show();
+            this.Close();
         }
     }
 }

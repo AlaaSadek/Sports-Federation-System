@@ -30,8 +30,9 @@ namespace SFS
         {
            string avail ="";
             if (yes.IsChecked == true)
-                avail = "Available";
-            if ((yes.IsChecked == true) && (no.IsChecked == true))
+                avail = "Yes";
+            else avail = "No";
+            if ((yes.IsChecked == false) && (no.IsChecked == false))
                 MessageBox.Show("Please fill the required information !");
 
             else
@@ -54,20 +55,36 @@ namespace SFS
                     Containers.write_Employee(Containers.Employee_list[i]);
 
                 }
+                if (Enter_ID_Employee.coaach == true)
+                {
+                    if (File.Exists("Coaches.xml"))
+                    {
+                        File.Delete("Coaches.xml");
+                    }
+
+                    for (int i = 0; i < Containers.Coach_list.Count; i++)
+                    {
+                        Containers.write_coach(Containers.Coach_list[i]);
+
+                    }
+                }
                 MessageBox.Show("Changes Done");
-                this.Hide();
+
             }
-
-
-
-
-
         }
 
         private void button_Copy_Click(object sender, RoutedEventArgs e)
         {
             Edit_Employee oo = new Edit_Employee();
             oo.Show();
+            this.Close();
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

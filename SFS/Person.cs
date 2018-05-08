@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SFS
 {
@@ -16,6 +12,9 @@ namespace SFS
         float salary;
         float bonus;
         string mobile;
+        static public int count1=0;
+        static public int count2 = 0;
+
         public Person()
         {
             name = "";

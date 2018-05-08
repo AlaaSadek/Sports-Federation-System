@@ -26,9 +26,22 @@ namespace SFS
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
+            bool check = false;
+            for (int i = 0; i < Containers.Sponsor_list.Count; i++)
+            {
+                if (Containers.Sponsor_list[i].GetSponser_name() == textBox.Text)
+                {
+                    check = true;
+                    break;
+                }
+            }
             if (textBox.Text == "")
             {
                 MessageBox.Show("Please fill the required information");
+            }
+            else if(check==false)
+            {
+                MessageBox.Show("Please enter valid sponser name !");
             }
             List<string> sponser_name = new List<string>();
            // List<int> contractdate = new List<int>();
@@ -75,14 +88,30 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            displayOptions m = new displayOptions(); 
-                m.Show();
-            this.Close();
+            if (adminoptions.disp == true)
+            {
+                displayOptions z = new displayOptions();
+                z.Show();
+                this.Close();
+            }
+            else
+            {
+                searchoptions so = new searchoptions();
+                so.Show();
+                this.Close();
+            }
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-            Options o = new Options();
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
+
+        private void button3_Click_1(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
             o.Show();
             this.Close();
         }

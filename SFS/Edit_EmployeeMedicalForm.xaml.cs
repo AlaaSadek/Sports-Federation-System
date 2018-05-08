@@ -33,7 +33,7 @@ namespace SFS
             string med = "NO";
             if (yes.IsChecked == true)
                 med = "YES";
-            if ((yes.IsChecked == true) && (no.IsChecked == true))
+            if ((yes.IsChecked == false) && (no.IsChecked == false))
                 MessageBox.Show("Please fill the required information !");
 
             else
@@ -57,18 +57,50 @@ namespace SFS
                     Containers.write_Employee(Containers.Employee_list[i]);
 
                 }
+              
+                if (Enter_ID_Employee.coaach == true)
+                {
+                    for (int i = 0; i < Containers.Coach_list.Count; i++)
+                    {
+                        if (Containers.Coach_list[i].getId().ToString() == Enter_ID_Employee.employeeeid)
+                        {
+                            Containers.Coach_list[i].setMedicalReport(med);
+
+                        }
+
+                    }
+                    if (File.Exists("Coaches.xml"))
+                    {
+                        File.Delete("Coaches.xml");
+                    }
+
+                    for (int i = 0; i < Containers.Coach_list.Count; i++)
+                    {
+                        Containers.write_coach(Containers.Coach_list[i]);
+
+                    }
+                }
                 MessageBox.Show("Changes Done");
-                this.Hide();
+               
+                
             }
         }
         private void button_Click(object sender, RoutedEventArgs e)
         {
-
+            Edit_Employee eee = new Edit_Employee();
+            eee.Show();
+            this.Close();
         }
 
         private void radioButton1_Checked(object sender, RoutedEventArgs e)
         {
 
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

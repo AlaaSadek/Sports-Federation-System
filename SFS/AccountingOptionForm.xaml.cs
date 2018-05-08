@@ -26,6 +26,7 @@ namespace SFS
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
+            Loginas.au = "no";
             Loginas lg = new Loginas();
             lg.Show();
             this.Close();
@@ -43,6 +44,27 @@ namespace SFS
             Add_Expense adde = new Add_Expense();
             adde.Show();
             this.Close();
+
+        }
+
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            yearlyincome_statement yi = new yearlyincome_statement();
+            yi.Show();
+            this.Close();
+        }
+
+        private void button5_Click(object sender, RoutedEventArgs e)
+        {
+
+            Loginas.au = "no";
+            Loginas lgn = new Loginas();
+            lgn.Show();
+            this.Close();
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
 
         }
     }

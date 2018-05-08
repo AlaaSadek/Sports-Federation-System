@@ -1,24 +1,66 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Results>
   <Result>
-    <Player_ID>La10</Player_ID>
-    <Championship_Type>NON-OFFICIAL</Championship_Type>
-    <Championship_Place>cairo</Championship_Place>
-    <Results>200</Results>
-    <Name>Heliopolis</Name>
+    <Player_ID>1Ya98</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>2000</Results>
+    <Name>Swimming2018</Name>
   </Result>
   <Result>
-    <Player_ID>sa01</Player_ID>
+    <Player_ID>1Ya98</Player_ID>
     <Championship_Type>OFFICIAL</Championship_Type>
-    <Championship_Place>cairo</Championship_Place>
-    <Results>250</Results>
-    <Name>Heliopolis</Name>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>2000</Results>
+    <Name>Swimming2018</Name>
   </Result>
   <Result>
-    <Player_ID>sa01</Player_ID>
+    <Player_ID>3Sa98</Player_ID>
     <Championship_Type>OFFICIAL</Championship_Type>
-    <Championship_Place>Alex</Championship_Place>
-    <Results>40</Results>
-    <Name>Swimming</Name>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>1000</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>11Fa00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>1000</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>11Fa00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>1000</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>9Da00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>90</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>27Ma00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>300</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>27Ma00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>500</Results>
+    <Name>Swimming2018</Name>
+  </Result>
+  <Result>
+    <Player_ID>24Ye00</Player_ID>
+    <Championship_Type>OFFICIAL</Championship_Type>
+    <Championship_Place>Cairo</Championship_Place>
+    <Results>1500</Results>
+    <Name>Swimming2018</Name>
   </Result>
 </Results>

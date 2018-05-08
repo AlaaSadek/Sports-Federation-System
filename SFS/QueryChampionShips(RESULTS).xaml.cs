@@ -26,34 +26,64 @@ namespace SFS
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
-            if(Max_res.IsChecked==true)
+            if (textBox.Text == ""|| Min_Res.IsChecked==false && Max_res.IsChecked == false)
             {
-                Championships max = new Championships();
-                int maxx_res = 0;
-                for(int i=0;i<Containers.championship_list.Count();i++)
+                MessageBox.Show("Please Enter Valid Data !");
+            }
+            else
+            {
+
+
+
+
+                if (Max_res.IsChecked == true)
                 {
-                    if(Containers.championship_list[i].Getresults()>=maxx_res)
+                    float maxscore = -1;
+                    string maxname = "";
+                    List<Club> l = Containers.Club_list;
+                    for (int z = 0; z < l.Count; z++)
                     {
-                        maxx_res = Containers.championship_list[i].Getresults();
-                        max = Containers.championship_list[i];
+                        for (int m = 0; m < l[z].champList.Count; m++)
+                        {
+                            if (l[z].champList[m].Getresults() > maxscore && textBox.Text == l[z].champList[m].getName())
+                            {
+                                maxscore = l[z].champList[m].Getresults();
+                                maxname = l[z].getClubName();
+                            }
+                        }
+                    }
+                    MessageBox.Show(maxname + maxscore.ToString());
+
+                }
+                else if (Min_Res.IsChecked == true)
+                {
+                    float maxscore = 10000000;
+
+                    string maxname = "";
+                    List<Club> l = Containers.Club_list;
+                    for (int z = 0; z < l.Count; z++)
+                    {
+                        for (int m = 0; m < l[z].champList.Count; m++)
+                        {
+                            if (l[z].champList[m].Getresults() < maxscore && textBox.Text == l[z].champList[m].getName())
+                            {
+                                maxscore = l[z].champList[m].Getresults();
+                                maxname = l[z].getClubName();
+                            }
+                        }
+                    }
+                    if (maxscore == 10000000 || maxscore == -1)
+                    {
+                        MessageBox.Show("Results Not available !");
+
+                    }
+                    else
+                    {
+                        MessageBox.Show(maxname + maxscore.ToString());
                     }
                 }
-                MessageBox.Show(max.getName() + ' ' + max.GetPlace());
             }
-            if (Min_Res.IsChecked == true)
-            {
-                Championships min = new Championships();
-                int minn_res = 1000000;
-                for (int i = 0; i < Containers.championship_list.Count(); i++)
-                {
-                    if (Containers.championship_list[i].Getresults() <= minn_res)
-                    {
-                        minn_res = Containers.championship_list[i].Getresults();
-                        min = Containers.championship_list[i];
-                    }
-                }
-                MessageBox.Show(min.getName() + ' ' + min.GetPlace());
-            }
+
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -62,5 +92,22 @@ namespace SFS
             mq.Show();
             this.Close();
         }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions ap = new adminoptions();
+            ap.Show();
+            this.Close();
+        }
     }
 }
+

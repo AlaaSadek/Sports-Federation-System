@@ -33,46 +33,92 @@ namespace SFS
         {
            
             bool find = false;
-            for (int i = 0; i < Containers.Player_list.Count; i++)
+            if (id.Text == "")
             {
-                if (Containers.Player_list[i].getId() == id.Text)
-                {
-                    Containers.Player_list.Remove(Containers.Player_list[i]);
-                    find = true;
-                }
-            }
-            if (find == false)
-            {
-                MessageBox.Show("Wrong ID");
+                MessageBox.Show("Please Enter ID");
             }
             else
             {
-                if (File.Exists("Players.xml"))
-                {
-                    File.Delete("Players.xml");
-                }
-
                 for (int i = 0; i < Containers.Player_list.Count; i++)
                 {
-                    Containers.write_Player(Containers.Player_list[i]);
-
+                    if (Containers.Player_list[i].getId() == id.Text)
+                    {
+                        Containers.Player_list.Remove(Containers.Player_list[i]);
+                        find = true;
+                    }
                 }
-                
-                MessageBox.Show("Successfuly Deleted");
+                if (find == false)
+                {
+                    MessageBox.Show("Wrong ID");
+                }
+                else
+                {
+                    if (File.Exists("Players.xml"))
+                    {
+                        File.Delete("Players.xml");
+                    }
+
+                    for (int i = 0; i < Containers.Player_list.Count; i++)
+                    {
+                        Containers.write_Player(Containers.Player_list[i]);
+
+                    }
+                    MessageBox.Show("Successfuly Deleted");
+                }
             }
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
         {
-            Edit_Delete ed = new Edit_Delete();
-            ed.Show();
+
+            Edit_Optionss eo = new Edit_Optionss();
+            eo.Show();
+            this.Close();
         }
 
         private void button3_Click(object sender, RoutedEventArgs e)
         {
-              playerid=id.Text;
-        Edit_Player p=new Edit_Player();
-            p.Show();
+            bool find = false;
+            if (id.Text == "")
+            {
+                MessageBox.Show("Please Enter ID");
+            }
+            else
+            {
+                for (int i = 0; i < Containers.Player_list.Count; i++)
+                {
+                    if (Containers.Player_list[i].getId() == id.Text)
+                    {
+                        
+                        find = true;
+                    }
+                }
+                if (find == false)
+                {
+                    MessageBox.Show("Wrong ID");
+                }
+                else
+                {
+                    playerid = id.Text;
+                    Edit_Player p = new Edit_Player();
+                    p.Show();
+                    this.Close();
+                }
+            }
+              
+        }
+        private void button4_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }

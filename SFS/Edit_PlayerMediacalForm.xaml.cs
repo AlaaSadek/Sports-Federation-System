@@ -38,7 +38,7 @@ namespace SFS
         {
             Edit_Player ep = new Edit_Player();
             ep.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)
@@ -46,8 +46,10 @@ namespace SFS
             string med = "NO";
             if (yes.IsChecked == true)
                 med = "YES";
-            if ((yes.IsChecked == true) && (no.IsChecked == true))
+            if ((yes.IsChecked == false) && (no.IsChecked == false))
+            {
                 MessageBox.Show("Please fill the required information !");
+            }
 
             else
             {
@@ -71,13 +73,19 @@ namespace SFS
 
                 }
                 MessageBox.Show("Changes Done");
-                this.Hide();
+
             }
 
 
-
+ 
 
             
+        }
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            adminoptions o = new adminoptions();
+            o.Show();
+            this.Close();
         }
     }
 }
